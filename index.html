@@ -10,25 +10,45 @@
         <!-- Linking of External Files -->
         <link rel="shortcut icon" tpye="image/x-icon" href="./assets/favicon.ico">
         <link rel="stylesheet" href="style.css">
-        <script src="./javascript/index.js"></script>
-    </head>
-    <body>
-        <nav class="nav-bar">
-            <!--<img class="site-logo" src="./assets/logo.svg">-->
-            <ul class="nav-links">
-                <li>
-                    <a href="index.html" class="active">Home</a>
-                </li>
-                <li>
-                    <a href="#">Projects</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-            </ul>
-        </nav>
-        <script>
 
-        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+    <body onload="homeScreenAnimation()">
+        <section class="header">
+            <nav class="nav-bar">
+                <a href="index.html" class="site-identity">
+                    <img class="site-logo" src="./assets/logo.svg">
+                    <h3>portfolio</h3>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+            <canvas class="header-animation">
+            </canvas>
+            <div class="header-content">
+                <code class="header-title">
+                </code>
+            </div>
+        </section>
+        <section class="featured">
+
+        </section>
+        <section class="skills">
+
+        </section>
+        <script src="./javascript/index.js"></script>
+        <script src="./javascript/canvasanimation.js"></script>
     </body>
 </html>

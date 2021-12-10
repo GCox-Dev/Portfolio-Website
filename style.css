@@ -5,31 +5,53 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .nav-bar {
     display:flex;
     align-items:center;
     justify-content: space-around;
-    background: linear-gradient(to bottom right, #1e1e1e, #000);
     height:6vh;
+    z-index: 0;
+}
+
+.site-identity {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    flex: 60%;
 }
 
 .site-logo {
-    width: 100%;
-    height: 100%;
-    padding:4px;
-    flex: 34%;
+    width: auto;
+    height: 3.8vh; 
+    min-height: 30px;
+    margin: 2px 2px 2px 20px;
+}
+
+.site-identity h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .nav-links {
     display:flex;
     justify-content: space-around;
+    align-items: center;
     list-style-type: none;
-    flex:66%;
+    flex:40%;
 }
 
 .nav-links li a {
-    font-weight: 700;
+    font-weight: 600;
     font-size:0.9rem;
+    letter-spacing: 1.2px;
     color: #fff;
     border: solid 2px;
     border-color: #ffffff00;
@@ -37,6 +59,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 3px 7px 3px 7px;
+    margin:2px;
 }
 
 .nav-links li a:hover {
@@ -55,4 +78,48 @@
     background-color:#000;
     color:#fff !important;
     transition: color, background-color .3s ease !important;
+}
+
+.burger {
+    display: none;
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-animation {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #0c0c0c);
+}
+
+.header-content {
+    height: 94vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    color: #FFF;
+    font-size:9rem;
+    text-shadow: #009F00 1px 1px 1px;
+    font-family: 'VT323', monospace;
+}
+
+.header-subtitle {
+    color: #FFF;
+}
+
+.featured {
+    min-height: 100vh;
+    background:linear-gradient(to bottom, #0c0c0c, #1c1c1c)
 }
