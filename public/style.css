@@ -274,6 +274,25 @@ html {
     color: #000;
 }
 
+.about-content {
+    opacity: 0;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    transition: 0.5s ease-in;
+}
+
+.about-content p, .about-content a {
+    color: #FFF;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
 .sec-1 {
     min-height: 100vh;
     width: 100vw;
@@ -297,6 +316,10 @@ footer {
     width: 100vw;
     background-color: #111111;
     display: flex;
+}
+
+.one-section {
+    background-color: #0c0c0c !important;
 }
 
 .socials {

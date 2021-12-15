@@ -82,7 +82,7 @@ function typeAnimation(txt, tar, spd) {
 }
 
 function flashingChar(txt, char, tar, spd) {
-    let charOn = false;
+    let charOn = true;
     const textElement = document.querySelector(`.${tar}`);
     function frame() {
         if (charOn) textElement.innerHTML = `${txt}${char}`;
@@ -170,6 +170,15 @@ function skillsAnimation() {
     }, 1100);
 }
 
+function aboutSectionAnimation() {
+    window.setTimeout(() => typeAnimation('About Me', 'section-title', 150), 300);
+    window.setTimeout(() => {
+        flashingChar('About Me', ':', 'section-title', 500);
+        let paragraphs = document.querySelector('.about-content');
+        paragraphs.style.opacity = 1;
+    }, 1100);
+}
+
 function aboutAnimation() {
     window.setTimeout(() => typeAnimation('About', 'header-title', 150), 300);
     window.setTimeout(() => flashingChar('About', '_', 'header-title', 500), 900);
@@ -226,7 +235,8 @@ function aboutMain() {
     navSlide();
     toTopIn();
     callToAction();
-    onScroll([toTopIn]);
+    aboutTitle();
+    onScroll([toTopIn, aboutTitle]);
     button('to-top', () => sendTo('header', 1000));
     button('call-to-action', () => sendTo('sec-1', 1000));
 }
@@ -256,6 +266,15 @@ function featuredTitle() {
     let header = document.querySelector('.header');
     if (window.pageYOffset >= header.getBoundingClientRect().bottom * 0.5 && !doFeaturedAnimation) {
         featuredAnimation();
+        doFeaturedAnimation = true;
+    }
+}
+
+function aboutTitle() {
+    let header = document.querySelector('.header');
+    if (window.pageYOffset >= header.getBoundingClientRect().bottom * 0.5 && !doFeaturedAnimation) {
+        aboutSectionAnimation();
+        console.log("test");
         doFeaturedAnimation = true;
     }
 }
