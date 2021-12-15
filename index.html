@@ -14,41 +14,99 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/3abbd89c02.js" crossorigin="anonymous"></script>
 
     </head>
-    <body onload="homeScreenAnimation()">
+    <body>
         <section class="header">
             <nav class="nav-bar">
-                <a href="index.html" class="site-identity">
-                    <img class="site-logo" src="./assets/logo.svg">
-                    <h3>portfolio</h3>
-                </a>
+                <div class="site-identity">
+                    <a href="index.html" class="site-link">
+                        <img class="site-logo" src="./assets/logo.svg">
+                        <h3>portfolio</h3>
+                    </a>
+                </div>
+                <div class="spacer"></div>
                 <ul class="nav-links">
                     <li>
                         <a href="index.html" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="./pages/projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="./pages/about.html">About</a>
                     </li>
                 </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </nav>
             <canvas class="header-animation">
             </canvas>
             <div class="header-content">
                 <code class="header-title">
                 </code>
+                <i class="fas fa-chevron-down call-to-action"></i>
             </div>
         </section>
-        <section class="featured">
-
+        <section class="sec-1">
+            <code class="section-title featured"></code>
+            <div class="section-content featured-content">
+                
+            </div>
         </section>
-        <section class="skills">
-
+        <section class="sec-2">
+            <code class="section-title skills"></code>
+            <div class="section-content skills-content">
+                <div class="card skill-card">
+                    <code class="number">01</code>
+                    <code class="title">Front-End</code>
+                    <p>
+                        I enjoy using either Wordpress, or just pure HTML, CSS, and JavaScript to create profesional looking websites. While I do have some Back-End skills, I am mostly focused on the front end.
+                    </p>
+                </div>
+                <div class="card skill-card">
+                    <code class="number">02</code>
+                    <code class="title">Mobile</code>
+                    <p>
+                        By using the Flutter API created by google, and Dart, I create useful, user centric apps that help people in there day to day lifes. Currently my apps are focused on students, but I hope to eventualy branch out to other aspects of life, and make then a little bit easier.
+                    </p>
+                </div>
+                <div class="card skill-card">
+                    <code class="number">03</code>
+                    <code class="title">Arduino</code>
+                    <p>
+                        Through C++ for software, and Arduino micro controllers for the electronics, I can create almost anything. Robots have always fasinated me, so I learned how to create my own. And through these simple tools, I can do just that.
+                    </p>
+                </div>
+            </div>
         </section>
-        <script src="./javascript/index.js"></script>
-        <script src="./javascript/canvasanimation.js"></script>
+        <footer>
+            <div class="socials">
+                <code>Follow Me:</code>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/grant-cox-545300226/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gcoxdev/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/gcox-dev">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto: gcoxdev@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <i class="fas fa-chevron-up to-top"></i>
+        <script tpye="text/javascript" src="./javascript/canvasanimation.js"></script>
+        <script tpye="text/javascript" src="./javascript/index.js"></script>
+        <script>init(homeMain)</script>
     </body>
 </html>

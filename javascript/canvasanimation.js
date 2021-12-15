@@ -17,12 +17,11 @@ document.querySelector('.header').addEventListener('mousemove',
         mouse.y = event.pageY;
     }
 );
-
 window.addEventListener('resize',
     (event) => {
         ctx.canvas.width = window.innerWidth,
         ctx.canvas.height = window.innerHeight;
-        init();
+        reset();
     }
 );
 
@@ -83,9 +82,9 @@ class Particle {
 
 function init() {
     particleArray = []
-    let numberOfParticles = (canvas.height * canvas.width) / 8000;
+    let numberOfParticles = (canvas.height * canvas.width) / 10000;
     for (let i = 0; i < numberOfParticles; i++) {
-        let size = 1;
+        let size = (Math.random() * 2) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let dirX = (Math.random() * 1) - 0.5;
@@ -100,18 +99,13 @@ function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-    if (innerWidth > 800) {
-        for (let i = 0; i < particleArray.length; i++) {
-            particleArray[i].update();
-        }
-    } else {
-        for (let i = 0; i < particleArray.length; i++) {
-            particleArray[i].draw();
-        }
+    for (let i = 0; i < particleArray.length; i++) {
+        particleArray[i].update();
     }
 
     connect();
 }
+
 
 function connect() {
     let opacity = 1;
@@ -121,7 +115,7 @@ function connect() {
             * (particleArray[a].x - particleArray[b].x))
             + ((particleArray[a].y - particleArray[b].y)
             * (particleArray[a].y - particleArray[b].y));
-            opacity = 1 - distance / 20000;
+            opacity = 0.75 - distance / 20000;
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 ctx.strokeStyle = `rgba(255,255,255,${opacity}`;
                 ctx.beginPath();
@@ -130,6 +124,20 @@ function connect() {
                 ctx.stroke();
             }
         }
+    }
+}
+
+function reset() {
+    particleArray = []
+    let numberOfParticles = (canvas.height * canvas.width) / 10000;
+    for (let i = 0; i < numberOfParticles; i++) {
+        let size = (Math.random() * 2) + 1;
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+        let dirX = (Math.random() * 0.5) - 0.25;
+        let dirY = (Math.random() * 0.5) - 0.25;
+        let color = '#ffffff';
+        particleArray.push(new Particle(x, y, dirX, dirY, size, color));
     }
 }
 

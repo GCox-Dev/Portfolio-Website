@@ -1,0 +1,68 @@
+[
+    {
+		"title" : "Cyclone Game",
+		"number" : 1,
+		"img" : "",
+		"page_link" : "#",
+		"intro" : "",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : false,
+		"category" : "arduino"
+	},
+	{
+		"title" : "Finals Week",
+		"number" : 2,
+		"img" : "",
+		"page_link" : "#",
+		"intro" : "Finals Week was the first app that I have ever released to any app store. Currently available on the android app store, it is a combination of tools to ease the stress for high school students during finals week. Features include a final grade calculator, a semester gpa calculator (designed for the gpa scale at my highschool, a cumulative gpa calculator, a normal four function calculator, and a study timer that acts as a to do list. I made this app using the Flutter api produced by Google, and Dart (a language similar to JavaScript).",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : true,
+		"category" : "mobile"
+	},
+	{
+		"title" : "To Do List",
+		"number" : 3,
+		"img" : "",
+		"page_link" : "#",
+		"intro" : "Homework: To Do List is an app inspired by a project one of my class mates created. The basic premise of the app is that you can add various school related tasks to your overall list. These tasks can be assigned due dates, priority, and a category based on what type of class the task is from. You could then sort by these properties of each task. This was the second app I have released, and building from knowledge acquired from my last app, it is a big improvement. The user experience is greatly streamlined, and there is finally data serialization, which allows the user to save their tasks after the app is closed.",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : true,
+		"category" : "mobile"
+	},
+	{
+		"title" : "Ultrasound First",
+		"number" : 5,
+		"img" : "",
+		"page_link" : "#",
+		"intro" : "Ultrasound First is an ultrasound clinic owned and operated by my family. We specialize in musculoskeletal ultrasound, which serves as a cheaper alternative to MRIs. This was my first full scale professional website. I was hired to revamp, and maintain the website, as well as post up to date educational articles. I accomplished this by using a Wordpress theme as the base, and custom HTML elements in order to make the website have character of its own. This was one of my first experiences with Wordpress, and  it makes things much easier to develop with its wide range of built in tools.",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : true,
+		"category" : "web"
+	},
+	{
+		"title" : "Portfolio",
+		"number" : 4,
+		"img" : "",
+		"page_link" : "#",
+		"intro" : "This website is a showcase of my abilities in computer science by displaying projects in web development, app development, arduino, small JavaScript games, and fun experiments. My Portfolio Website is my first full scale website using HTML, CSS, and JavaScript. While I had previous experience with HTML, I had never made anything to this scale. I also had very limited experience in JavaScript, however through a long development process, I now have pretty extensive abilities within the language. This is the third version of this website,between one refactor, and a complete loss of data, including its source code, this is the third and final version.",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : true,
+		"category" : "web"
+	},
+	{
+		"title" : "Particles",
+		"number": 6,
+		"img" : "",
+		"page_link" : "#",
+		"intro": "",
+		"challenges" : "",
+		"conclusion" : "",
+		"featured" : false,
+		"category" : "other"
+	}
+]
