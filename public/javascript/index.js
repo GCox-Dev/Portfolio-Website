@@ -131,18 +131,15 @@ function featuredAnimation() {
     window.setTimeout(() => {
         flashingChar('Projects', ':', "featured", 500);
         let projectCards = document.querySelectorAll('.featured-card');
-        console.log(projectCards);
 
         let index = 0;
 
         let timer = setInterval(addCard, 500);
 
         function addCard() {
-            console.log("test");
             projectCards[index].classList.toggle("visible");
             index++;
             if (index === projectCards.length) {
-                console.log("done");
                 clearInterval(timer);
                 timer = null;
             }
@@ -156,7 +153,6 @@ function skillsAnimation() {
     window.setTimeout(() => {
         flashingChar('Skills', ':', "skills", 500);
         let projectCards = document.querySelectorAll('.skill-card');
-        console.log(projectCards);
 
         let index = 0;
 

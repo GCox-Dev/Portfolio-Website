@@ -9,6 +9,7 @@ html {
     overflow-x: hidden;
 }
 
+
 .nav-bar {
     display:flex;
     align-items:center;
@@ -334,6 +335,12 @@ footer {
 
 
 @media screen and (max-width: 950px) {
+
+    body {
+        overflow:hidden !important;
+        width: 100%;
+    }
+
 	.nav-links {
         z-index:1;
 		position: absolute;
@@ -342,11 +349,11 @@ footer {
 		top: 0;
 		background-color: #000000bb;
 		align-items: center;
-		display: flex;
+		display: none;
 		flex-direction: column;
 		width: 50%;
 		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
+		transition: transform 0.5s ease-in, display 0s;
 	}
 	.nav-links li {
 		opacity: 0;
@@ -354,6 +361,7 @@ footer {
 
     .nav-active {
         transform: translateX(0%);
+        display: flex;
     }
 
 	.burger {
@@ -361,6 +369,12 @@ footer {
         margin-right: 20px;
 		display: block;
 	}
+}
+
+@media screen and (max-width: 550px) {
+    .header-title {
+        font-size: 6rem;
+    }
 }
 
 @keyframes navLinkFade {
