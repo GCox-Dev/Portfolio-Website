@@ -243,10 +243,14 @@ function aboutMain() {
 
 function projectsMain(data) {
     projects = data;
+    let projectsController = new ProjectController(data);
     navSlide();
     projectsAnimation();
     toTopIn();
     callToAction();
+    flashingChar('Projects', ':', 'section-title', 500);
+    projectsController.onSearch();
+    projectsController.displayProjects();
     onScroll([toTopIn]);
     button('to-top', () => sendTo('header', 1000));
     button('call-to-action', () => sendTo('sec-1', 1000));
@@ -301,3 +305,58 @@ window.addEventListener("resize", () => {
     });
     burger.classList.remove('toggle');
 });
+
+// Project Controller
+
+class ProjectController {
+    constructor (data) {
+        this.projects = data;
+        this.displayed_projects = data;
+    }
+
+    displayProjects() {
+        let projectsContainer = document.querySelector('.projects-container');
+        projectsContainer.innerHTML = "";
+        let index = 0;
+        this.displayed_projects.forEach((project) => {
+            let summary = "";
+            let introduction = project.intro.split(" ");
+            let letterCount = 0;
+            for (let i = 0; i < introduction.length && i < 40; i++) {
+                summary += introduction[i] + " ";
+                letterCount = i;
+            }
+            index++;
+            if (letterCount == 39) summary += " [...]";
+            projectsContainer.innerHTML += `
+            <div class="card visible">
+                <code class="number">0${index}</code>
+                <code class="title">${project.title}</code>
+                <p>${summary}</p>
+                <a href="${project.page_link}">read more</a>
+            </div>
+            `;
+        });
+    }
+
+    onSearch() {
+        let searchBar = document.querySelector('.search');
+        searchBar.addEventListener('change', () => {
+            let value = searchBar.value;
+            let dis = [];
+            if (value == '') {
+                dis = projects;
+            }
+            console.log(projects);
+            projects.forEach((project) => {
+                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                    dis.push(project);
+                }
+            });
+            console.log(dis);
+            console.log(this.projects);
+            this.displayed_projects = dis;
+            this.displayProjects();
+        });
+    }
+}

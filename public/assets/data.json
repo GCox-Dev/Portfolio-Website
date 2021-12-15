@@ -4,7 +4,7 @@
 		"number" : 1,
 		"img" : "",
 		"page_link" : "./pages/projects.html",
-		"intro" : "",
+		"intro" : "The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone games from most arcades. LEDs move back and forth, and depending on what LED you land on you get a certain amount of points. The goal of the project was to create something using a microcontroller, whether that be a robot, or in my case an arcade game. Most of my classmates used the VEX cortex to achieve this goal, however I decided to challenge myself by using an arduino. This gave me more flexibility, but also meant I had to write a lot more software. This was one of the first arduino projects I took to a completed product.",
 		"featured" : false,
 		"category" : "arduino"
 	},
@@ -18,8 +18,17 @@
 		"category" : "mobile"
 	},
 	{
-		"title" : "To Do List",
+		"title" : "Amazing Gravity",
 		"number" : 3,
+		"img" : "",
+		"page_link" : "./pages/projects.html",
+		"intro" : "aMazing Gravity was made for the final project of the Digital Electronics class at my high school. This was the third version of this game, and was upgraded through multiple different projects. Being the final project, it was a combination of all the skills we had learned throughout the school year. The goal of the game was to get a ball through a spinning maze, and you would get points based on where the ball landed, within a certain time limit. The game used an Arduino Nano to control the game logic. It used button inputs in order to control the maze, limit switches to determine points, and had multiple LEDs and a buzzer in order to provide user feedback.",
+		"featured" : false,
+		"category" : "arduino"
+	},
+	{
+		"title" : "To Do List",
+		"number" : 4,
 		"img" : "",
 		"page_link" : "./pages/projects.html",
 		"intro" : "Homework: To Do List is an app inspired by a project one of my class mates created. The basic premise of the app is that you can add various school related tasks to your overall list. These tasks can be assigned due dates, priority, and a category based on what type of class the task is from. You could then sort by these properties of each task. This was the second app I have released, and building from knowledge acquired from my last app, it is a big improvement. The user experience is greatly streamlined, and there is finally data serialization, which allows the user to save their tasks after the app is closed.",
@@ -37,20 +46,11 @@
 	},
 	{
 		"title" : "Portfolio",
-		"number" : 4,
+		"number" : 6,
 		"img" : "",
 		"page_link" : "./pages/projects.html",
 		"intro" : "This website is a showcase of my abilities in computer science by displaying projects in web development, app development, arduino, small JavaScript games, and fun experiments. My Portfolio Website is my first full scale website using HTML, CSS, and JavaScript. While I had previous experience with HTML, I had never made anything to this scale. I also had very limited experience in JavaScript, however through a long development process, I now have pretty extensive abilities within the language. This is the third version of this website,between one refactor, and a complete loss of data, including its source code, this is the third and final version.",
 		"featured" : true,
 		"category" : "web"
-	},
-	{
-		"title" : "Particles",
-		"number": 6,
-		"img" : "",
-		"page_link" : "./pages/projects.html",
-		"intro": "",
-		"featured" : false,
-		"category" : "other"
 	}
 ]
