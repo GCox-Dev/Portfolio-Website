@@ -343,18 +343,16 @@ class ProjectController {
         let searchBar = document.querySelector('.search');
         searchBar.addEventListener('change', () => {
             let value = searchBar.value;
+            let projects = this.projects;
             let dis = [];
-            if (value == '') {
+            if (value === '') {
                 dis = projects;
             }
-            console.log(projects);
-            projects.forEach((project) => {
+            else projects.forEach((project) => {
                 if (project.title.toLowerCase().includes(value.toLowerCase())) {
                     dis.push(project);
                 }
             });
-            console.log(dis);
-            console.log(this.projects);
             this.displayed_projects = dis;
             this.displayProjects();
         });
