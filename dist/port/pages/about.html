@@ -17,6 +17,15 @@
         
         <script src="https://kit.fontawesome.com/3abbd89c02.js" crossorigin="anonymous"></script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTYT7KHMTW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-NTYT7KHMTW');
+        </script>
+
     </head>
     <body>
         <section class="header">
@@ -33,10 +42,10 @@
                         <a href="../">Home</a>
                     </li>
                     <li>
-                        <a href="projects.html" class="active">Projects</a>
+                        <a href="projects.html">Projects</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="about.html"  class="active">About</a>
                     </li>
                 </ul>
                 <div class="burger">
@@ -54,9 +63,13 @@
             </div>
         </section>
         <section class="sec-1">
-            <code class="section-title projects">Projects</code>
-            <div class="search-container"><input class="search" type="text" placeholder="search projects"></div>
-            <div class='projects-container'></div>
+            <code class="section-title"></code>
+            <div class="about-content">
+                <p>My name is Grant Cox. I am currently a senior at Ladue Horton Watkins Highschool, however I am enrolled at Mizzou for Electrical Engineering. I enjoy computer science and electronics. I am on the varsity water polo team, and I was the captain of the varsity swim and dive team. I love anything to do with the water. I surf and wake board in the summers, and in the spring and fall I participate in triathlons. I love the outdoors, and spend much of my free time hiking and exploring.</p>
+                <p>I am currently employed at <a href="https://www.ultrasound-first.com" target="_blank">Ultrasound First</a>, a family run musculoskeletal ultrasound clinic in St. Louis. I built the website using wordpress and custom css. I currently keep the website up to date with articles released every week.</p>
+                <p>I have used many different languages over the years. I started off learning python, but eventually branched off into other languages: HTML/CSS, Java, JavaScript, C++, C#, and Dart along with the Flutter API.</p>
+                <p>I also use many tools in order to produce my projects. Git and GitHub are very useful tools in order to backup your projects. I use VS Code as my IDE as it provides many features that others don't. I would also highly recommend multiple monitors as it increases your productivity by reducing the amount of times you have to switch tabs. I use a 2021 ROG Zephyrus G14 for my laptop.</p>
+            </div>
         </section>
         <footer class="one-section">
             <div class="socials">
@@ -80,6 +93,6 @@
         <i class="fas fa-chevron-up to-top"></i>
         <script tpye="text/javascript" src="../javascript/canvasanimation.js"></script>
         <script tpye="text/javascript" src="../javascript/index.js"></script>
-        <script>init(projectsMain)</script>
+        <script>aboutMain()</script>
     </body>
 </html>
