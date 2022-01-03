@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "portfolio-website-5b7ae"
+  },
+  "targets": {
+    "portfolio-website-5b7ae": {
+      "hosting": {
+        "main": [
+          "portfolio-website-5b7ae"
+        ],
+        "cycl": [
+          "cyclone-14e87"
+        ]
+      }
+    }
   }
 }
