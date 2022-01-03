@@ -10,6 +10,21 @@
         ],
         "cycl": [
           "cyclone-14e87"
+        ],
+        "fnwk": [
+          "finals-week"
+        ],
+        "amgy": [
+          "amazing-gravity"
+        ],
+        "list": [
+          "homework-to-do-list"
+        ],
+        "usft": [
+          "ultrasound-first"
+        ],
+        "port": [
+          "portfolio-overveiw"
         ]
       }
     }
