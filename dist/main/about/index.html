@@ -23,7 +23,7 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-NTYT7KHMTW');
+            gtag('config', 'G-QXWQG34W3L');
         </script>
 
     </head>
@@ -42,10 +42,10 @@
                         <a href="../">Home</a>
                     </li>
                     <li>
-                        <a href="projects.html">Projects</a>
+                        <a href="../projects/">Projects</a>
                     </li>
                     <li>
-                        <a href="about.html"  class="active">About</a>
+                        <a href="/"  class="active">About</a>
                     </li>
                 </ul>
                 <div class="burger">
@@ -93,6 +93,18 @@
         <i class="fas fa-chevron-up to-top"></i>
         <script tpye="text/javascript" src="../javascript/canvasanimation.js"></script>
         <script tpye="text/javascript" src="../javascript/index.js"></script>
-        <script>aboutMain()</script>
+        <script>
+            function main() {
+                aboutAnimation();
+                navSlide();
+                toTopIn();
+                callToAction();
+                aboutTitle();
+                onScroll([toTopIn, aboutTitle]);
+                button('to-top', () => sendTo('header', 1000));
+                button('call-to-action', () => sendTo('sec-1', 1000));
+            }
+            main();
+        </script>
     </body>
 </html>

@@ -8,23 +8,11 @@
         "main": [
           "portfolio-website-5b7ae"
         ],
-        "cycl": [
-          "cyclone-14e87"
-        ],
         "fnwk": [
           "finals-week"
         ],
-        "amgy": [
-          "amazing-gravity"
-        ],
-        "list": [
+        "todo": [
           "homework-to-do-list"
-        ],
-        "usft": [
-          "ultrasound-first"
-        ],
-        "port": [
-          "portfolio-overveiw"
         ]
       }
     }

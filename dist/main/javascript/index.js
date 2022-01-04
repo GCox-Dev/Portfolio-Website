@@ -189,6 +189,11 @@ function projectsAnimation() {
     window.setTimeout(() => flashingChar('Projects', '_', 'header-title', 500), 900);
 }
 
+function cycloneAnimation() {
+    window.setTimeout(() => typeAnimation('Cyclone', 'header-title', 150), 300);
+    window.setTimeout(() => flashingChar('Cyclone', '_', 'header-title', 500), 900);
+}
+
 //Buttons
 
 function button(tar, func) {
@@ -212,48 +217,6 @@ function toTopIn() {
     let button = document.querySelector('.to-top');
     if (window.pageYOffset >= header.getBoundingClientRect().bottom * 0.75) button.style.opacity = 1;
     else button.style.opacity = 0;
-}
-
-// Main Functions
-
-function homeMain(data) {
-    projects = data;
-    headerAnimation();
-    navSlide();
-    toTopIn();
-    createFeaturedFromData();
-    featuredTitle();
-    skillsTitle();
-    callToAction();
-    onScroll([toTopIn, featuredTitle, skillsTitle]);
-    button('to-top', () => sendTo('header', 1000));
-    button('call-to-action', () => sendTo('sec-1', 1000));
-}
-
-function aboutMain() {
-    aboutAnimation();
-    navSlide();
-    toTopIn();
-    callToAction();
-    aboutTitle();
-    onScroll([toTopIn, aboutTitle]);
-    button('to-top', () => sendTo('header', 1000));
-    button('call-to-action', () => sendTo('sec-1', 1000));
-}
-
-function projectsMain(data) {
-    projects = data;
-    let projectsController = new ProjectController(data);
-    navSlide();
-    projectsAnimation();
-    toTopIn();
-    callToAction();
-    flashingChar('Projects', ':', 'section-title', 500);
-    projectsController.onSearch();
-    projectsController.displayProjects();
-    onScroll([toTopIn]);
-    button('to-top', () => sendTo('header', 1000));
-    button('call-to-action', () => sendTo('sec-1', 1000));
 }
 
 // Page Interactions

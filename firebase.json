@@ -10,8 +10,8 @@
       ]
     },
     {
-      "target": "cycl",
-      "public": "dist/cycl",
+      "target": "fnwk",
+      "public": "dist/fnwk",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -19,8 +19,8 @@
       ]
     },
     {
-      "target": "fnwk",
-      "public": "dist/fnwk",
+      "target": "todo",
+      "public": "dist/todo",
       "ignore": [
         "firebase.json",
         "**/.*",

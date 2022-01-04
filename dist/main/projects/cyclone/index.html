@@ -2,14 +2,14 @@
 <html>
     <head>
         <!-- Meta Data -->
-        <title>GCox Dev</title>
+        <title>Cyclone</title>
         <meta charset="UTF-8">
         <meta name="author" content="Grant Cox">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
 
         <!-- Linking of External Files -->
-        <link rel="shortcut icon" tpye="image/x-icon" href="../assets/favicon.ico">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="shortcut icon" tpye="image/x-icon" href="../../assets/favicon.ico">
+        <link rel="stylesheet" href="../../style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +17,13 @@
         
         <script src="https://kit.fontawesome.com/3abbd89c02.js" crossorigin="anonymous"></script>
 
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTYT7KHMTW"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTYT7KHMTW"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-NTYT7KHMTW');
+            gtag('config', 'G-QXWQG34W3L');
         </script>
 
     </head>
@@ -32,20 +32,20 @@
             <nav class="nav-bar">
                 <div class="site-identity">
                     <a href="../" class="site-link">
-                        <img class="site-logo" src="../assets/logo.svg">
+                        <img class="site-logo" src="../../assets/logo.svg">
                         <h3>portfolio</h3>
                     </a>
                 </div>
                 <div class="spacer"></div>
                 <ul class="nav-links">
                     <li>
-                        <a href="../">Home</a>
+                        <a href="../../">Home</a>
                     </li>
                     <li>
-                        <a href="projects.html" class="active">Projects</a>
+                        <a href="../projects/">Projects</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="/"  class="active">About</a>
                     </li>
                 </ul>
                 <div class="burger">
@@ -63,9 +63,7 @@
             </div>
         </section>
         <section class="sec-1">
-            <code class="section-title projects">Projects</code>
-            <div class="search-container"><input class="search" type="text" placeholder="search projects"></div>
-            <div class='projects-container'></div>
+           
         </section>
         <footer class="one-section">
             <div class="socials">
@@ -87,8 +85,19 @@
             </div>
         </footer>
         <i class="fas fa-chevron-up to-top"></i>
-        <script tpye="text/javascript" src="../javascript/canvasanimation.js"></script>
-        <script tpye="text/javascript" src="../javascript/index.js"></script>
-        <script>init(projectsMain)</script>
+        <script tpye="text/javascript" src="../../javascript/canvasanimation.js"></script>
+        <script tpye="text/javascript" src="../../javascript/index.js"></script>
+        <script>
+            function main() {
+                navSlide();
+                toTopIn();
+                callToAction();
+                cycloneAnimation();
+                onScroll([toTopIn]);
+                button('to-top', () => sendTo('header', 1000));
+                button('call-to-action', () => sendTo('sec-1', 1000));
+            }
+            main();
+        </script>
     </body>
 </html>
