@@ -57,6 +57,7 @@ html {
 }
 
 .nav-links li a {
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size:0.9rem;
     letter-spacing: 1.2px;
@@ -280,7 +281,7 @@ html {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: clamp(350px, );
+    width: clamp(350px, 60%, 60%);
     transition: 0.5s ease-in;
     margin-bottom: 20px;
 }
@@ -345,7 +346,7 @@ html {
 
 .sec-1 {
     min-height: 100vh;
-    width: 100vw;
+    width: 100vw !important;
     background:linear-gradient(to bottom, #0c0c0c, #111111);
     display: flex;
     flex-direction: column;
@@ -354,7 +355,7 @@ html {
 
 .sec-2 {
     min-height: 100vh;
-    width: 100vw;
+    width: 100vw !important;
     background:linear-gradient(to bottom, #111111, #161616);
     display: flex;
     flex-direction: column;

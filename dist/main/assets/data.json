@@ -4,7 +4,7 @@
 		"number" : 1,
 		"img" : "",
 		"page_link" : "https://gcox.dev/projects/cyclone/",
-		"intro" : "The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone games from most arcades. LEDs move back and forth, and depending on what LED you land on you get a certain amount of points. The goal of the project was to create something using a microcontroller, whether that be a robot, or in my case an arcade game. Most of my classmates used the VEX cortex to achieve this goal, however I decided to challenge myself by using an arduino. This gave me more flexibility, but also meant I had to write a lot more software. This was one of the first arduino projects I took to a completed product.",
+		"intro" : "The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone game from most arcades. LEDs move back and forth, and depending on what color LED you land on awards a certain amount of points. Red awards the least amount of points, then yellow, then green with the most.",
 		"featured" : false,
 		"category" : "arduino"
 	},
