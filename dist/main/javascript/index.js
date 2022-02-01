@@ -319,5 +319,35 @@ class ProjectController {
             this.displayed_projects = dis;
             this.displayProjects();
         });
+        searchBar.addEventListener('keyup', () => {
+            let value = searchBar.value;
+            let projects = this.projects;
+            let dis = [];
+            if (value === '') {
+                dis = projects;
+            }
+            else projects.forEach((project) => {
+                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                    dis.push(project);
+                }
+            });
+            this.displayed_projects = dis;
+            this.displayProjects();
+        });
+        searchBar.addEventListener('paste', () => {
+            let value = searchBar.value;
+            let projects = this.projects;
+            let dis = [];
+            if (value === '') {
+                dis = projects;
+            }
+            else projects.forEach((project) => {
+                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                    dis.push(project);
+                }
+            });
+            this.displayed_projects = dis;
+            this.displayProjects();
+        });
     }
 }
