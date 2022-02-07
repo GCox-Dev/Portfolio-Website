@@ -179,19 +179,9 @@ function aboutSectionAnimation() {
     }, 1100);
 }
 
-function aboutAnimation() {
-    window.setTimeout(() => typeAnimation('About', 'header-title', 150), 300);
-    window.setTimeout(() => flashingChar('About', '_', 'header-title', 500), 900);
-}
-
-function projectsAnimation() {
-    window.setTimeout(() => typeAnimation('Projects', 'header-title', 150), 300);
-    window.setTimeout(() => flashingChar('Projects', '_', 'header-title', 500), 900);
-}
-
-function cycloneAnimation() {
-    window.setTimeout(() => typeAnimation('Cyclone', 'header-title', 150), 300);
-    window.setTimeout(() => flashingChar('Cyclone', '_', 'header-title', 500), 900);
+function titleAnimation(title) {
+    window.setTimeout(() => typeAnimation(title, 'header-title', 150), 300);
+    window.setTimeout(() => flashingChar(title, '_', 'header-title', 500), 300 + title.length * 150);
 }
 
 //Buttons
@@ -312,7 +302,7 @@ class ProjectController {
                 dis = projects;
             }
             else projects.forEach((project) => {
-                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                if (project.title.toLowerCase().includes(value.toLowerCase()) || project.category.toLowerCase().includes(value.toLowerCase())) {
                     dis.push(project);
                 }
             });
@@ -327,7 +317,7 @@ class ProjectController {
                 dis = projects;
             }
             else projects.forEach((project) => {
-                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                if (project.title.toLowerCase().includes(value.toLowerCase()) || project.category.toLowerCase().includes(value.toLowerCase())) {
                     dis.push(project);
                 }
             });
@@ -342,7 +332,7 @@ class ProjectController {
                 dis = projects;
             }
             else projects.forEach((project) => {
-                if (project.title.toLowerCase().includes(value.toLowerCase())) {
+                if (project.title.toLowerCase().includes(value.toLowerCase()) || project.category.toLowerCase().includes(value.toLowerCase())) {
                     dis.push(project);
                 }
             });

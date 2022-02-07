@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Meta Data -->
-        <title>Cyclone</title>
+        <title>Finals Week</title>
         <meta charset="UTF-8">
         <meta name="author" content="Grant Cox">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
@@ -65,14 +65,11 @@
         </section>
         <article class="article">
             <code class="title-text">
-                Cyclone Arcade Game
+                Finals Week
             </code>
             <div class="section">
-                <p>The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone game from most arcades. LEDs move back and forth, and depending on what color LED you land on awards a certain amount of points. Red awards the least amount of points, then yellow, then green with the most. During each game the player has 5 tries to score as many points as possible.</p>
-                <p>There are two input buttons, a play button and a mode button. The play button starts the game, and stops the LED on the current color during game play. The mode button cycles through the different game modes within the start menu.</p>
-                <p>There are three game modes: easy, hard, and master. The different game modes increase the speed of the moving LED, and thus making it harder to land on the right LED. The points scale with the game mode, easy mode having less points than the rest of the modes</p>
-                <p>The LCD displays all the information about the game. This includes the start menu, which allows you to cycle through the different game modes, in addition to the in game screen. The in-game screen displays your current score and how many tries you have left.</p>
-                <p>The game ends when you run out of tries. The LCD is reset to the home screen where you can start the whole process again.</p>
+                <p>Finals Week is an app that contains calculators most students use during the week of finals. This includes a final grade calculator inspired by RogerHub, a semester GPA calculator, and a cumulative GPA calculator. These tools can help you to prioritize which class you need to study for the most. If you only need a 40% on one final to keep your A, but a 92% in another class, you should focus your efforts on that other class. Once you plan out what classes you need to study for, you can use the built in study timer to assist your studying.</p>
+                <p>The app contains a home menu, where you can navigate to the numerous tools the app offers. On one of the calculator tabs will bring you to the respective calculator, where you can enter your numbers, and get a result.</p>
             </div>
             <code class="header-text">Pictures</code>
             <div class="slide-show">
@@ -80,7 +77,6 @@
                 <div class="slide"><img src="assets/img2.jpg"></div>
                 <div class="slide"><img src="assets/img3.jpg"></div>
                 <div class="slide"><img src="assets/img4.jpg"></div>
-                <div class="slide"><img src="assets/img5.jpg"></div>
                 <a class="prev" onclick="progressSlide(-1)"><i class="fas fa-chevron-left"></i></a>
                 <a class="next" onclick="progressSlide(1)"><i class="fas fa-chevron-right"></i></a>
                 <div class="demo-container">
@@ -88,34 +84,18 @@
                     <img class="demo" src="assets/img2.jpg" onclick="currentSlide(1)">
                     <img class="demo" src="assets/img3.jpg" onclick="currentSlide(2)">
                     <img class="demo" src="assets/img4.jpg" onclick="currentSlide(3)">
-                    <img class="demo" src="assets/img5.jpg" onclick="currentSlide(4)">
                 </div>
             </div>
             <code class="header-text">Design Process</code>
             <div class="section">
-                <p>The original goal of the project was to design and program a “robot” restricted by the following constraints:</p>
-                <ul>
-                    <li>Must be user friendly. Use of labels and/or directions allow for an “untrained” person to utilize the machine</li>
-                    <li>Must successfully meet the team's design statement</li>
-                    <li>Must be efficient and reliable</li>
-                    <li>Program must include pseudocode and filled out pltw template</li>
-                    <li>Program includes functions, while loops, if/else structures, and variables</li>
-                    <li>Must be able to run “untethered” from the computer</li>
-                    <li>Must include some autonomous component</li>             
-                </ul>
-                <p>While my project was an arcade game and not a robot, the project did meet the technical constraints of the projects.</p>
-                <p>Most of my classmates used components available within the classroom, however I supplied parts from my own collection. The VEX system has its limitations. The VEX cortex only works with VEX parts. This eliminates many of the features of my project, including the main display and the buzzer used for feedback when the player performs an action. While my project could function without these parts, it wouldn’t be the same. In addition the VEX cortex was programmed with clunky proprietary software called ROBOTC, the syntax being unfamiliar to me.</p>
-                <p>I decided to use an arduino in place of the VEX system. While C++ is a little bit more complicated than ROBOTC, I already had some level of experience with the arduino software. In addition it had libraries to allow for the buzzer and LCD to function.</p>
-                <p>I started by coding the base game, an LED bouncing back and forth, being stopped by one button. Then I implemented the game modes, and a menu to cycle through the modes. I finished up the software by adding a start menu and other easter eggs. This includes being able to play a semi functional version of the game in the start menu, a system that would rig certain game modes, and a buzzer that goes off any time you press a button.</p>
-                <p>The core of the project is an Arduino Nano that runs the code and communicates with the rest of the components connected to the bread board. The entire project is powered by a single 9v battery whose output is reduced to 5v by the power circuit on the arduino board. The outer housing is made of painted cardboard.</p>
+                <p>This was the first app that I ever made, and thus came with its challenges. First I had to learn to actually program apps. I chose the Flutter API made by google. This API uses Dart, an easy to learn programming language, a mix of JS and Java. The API uses a nested structure similar to HTML, which allows you to do almost anything. Along with extensive documentation and a couple YouTube tutorials, learning how to code apps came quick. I had a working prototype of this app working within a couple days.</p>
+                <p>After this I entered the phase that most new developers will experience: feature hell. The original app idea was to turn the popular RogerHub website into an app that I could use on my phone, however more and more features were eventually added.</p>
+                <p>Eventually I neared the end of development. At this point I started testing for bugs, typos, and any other things that would ruin the user experience. It took a while to figure out how to upload the app to the app store. Unfortunately the Apple app store was out of my budget, but the google play store offered a streamlined process that allowed me to finally have my app go live.</p>
             </div>
-            <code class="header-text">Circuit</code>
-            <img class="image" src="assets/circuit.png">
             <code class="header-text">Conclusion</code>
-            <div class="section"><p>I think the final project turned out very well, however there are some changes I would make. The outer housing is a little tall due to limitations in wire length. I believe I could’ve designed a pcb that would accommodate the parts better than a bread board. This would allow for a smaller design. But in the end I did not have enough time to do so.</p>
+            <div class="section">
+                <p>Being my first ever mobile app, I’m pretty happy with the final app. However the app is packed with too many features. It will be a future goal of mine to renovate the app. In doing so I will be removing some unnecessary features, as well as adding new ones to streamline the app. This includes combining the cumulative gpa and semester gpa calculators, removing the basic calculator, and redoing the study timer. In addition to this I will be creating an accompanying website that can link to your phone using an account system, however this will not be necessary to use the app.</p>
             </div>
-            <div class="section"><a target="_blank" href="https://github.com/grantcox22/Cyclone-Arcade-Game">Code</a></div>
-            <div class="section"><a target="_blank" href="https://youtu.be/KX64nM4xGWQ">Video</a></div>
         </article>
         <footer class="one-section">
             <div class="socials">
@@ -177,11 +157,12 @@
                 navSlide();
                 toTopIn();
                 callToAction();
-                titleAnimation('Cyclone');
+                titleAnimation('Finals Week');
                 onScroll([toTopIn]);
+                showSlides(0);
                 button('to-top', () => sendTo('header', 1000));
                 button('call-to-action', () => sendTo('article', 1000));
-                showSlides(slideIndex);
+                //showSlides(slideIndex);
             }
 
             main();

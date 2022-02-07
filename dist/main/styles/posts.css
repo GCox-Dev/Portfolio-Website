@@ -15,6 +15,7 @@ article {
     font-size:4rem;
     text-shadow: #016601 1px 1px 1px;
     font-family: 'VT323', monospace;
+    text-align:center;
 }
 
 .header-text {
@@ -23,6 +24,7 @@ article {
     color: #FFF;
     font-size: 3.2rem;
     font-family: 'VT323', monospace;
+    text-align:center;
 }
 
 .section {
@@ -120,4 +122,10 @@ li {
 
 .demo:hover, .demo.act {
     opacity: 1;
+}
+
+.mid-p-img {
+    float:right;
+    margin: 10px;
+    width:100px;
 }
