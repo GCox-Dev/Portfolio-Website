@@ -91,6 +91,8 @@
                     <img class="demo" src="assets/img5.jpg" onclick="currentSlide(4)">
                 </div>
             </div>
+            <code class="header-text">Video</code>
+            <iframe class="video" src="https://www.youtube.com/embed/KX64nM4xGWQ?playlist=KX64nM4xGWQ&loop=1&mute=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
             <code class="header-text">Design Process</code>
             <div class="section">
                 <p>The original goal of the project was to design and program a “robot” restricted by the following constraints:</p>
@@ -110,12 +112,11 @@
                 <p>The core of the project is an Arduino Nano that runs the code and communicates with the rest of the components connected to the bread board. The entire project is powered by a single 9v battery whose output is reduced to 5v by the power circuit on the arduino board. The outer housing is made of painted cardboard.</p>
             </div>
             <code class="header-text">Circuit</code>
-            <img class="image" src="assets/circuit.png">
+            <img class="image" src="assets/circuit.jpg">
             <code class="header-text">Conclusion</code>
             <div class="section"><p>I think the final project turned out very well, however there are some changes I would make. The outer housing is a little tall due to limitations in wire length. I believe I could’ve designed a pcb that would accommodate the parts better than a bread board. This would allow for a smaller design. But in the end I did not have enough time to do so.</p>
             </div>
             <div class="section"><a target="_blank" href="https://github.com/grantcox22/Cyclone-Arcade-Game">Code</a></div>
-            <div class="section"><a target="_blank" href="https://youtu.be/KX64nM4xGWQ">Video</a></div>
         </article>
         <footer class="one-section">
             <div class="socials">
@@ -139,40 +140,8 @@
         <i class="fas fa-chevron-up to-top"></i>
         <script tpye="text/javascript" src="../../javascript/canvasanimation.js"></script>
         <script tpye="text/javascript" src="../../javascript/index.js"></script>
+        <script tpye="text/javascript" src="../../javascript/post.js"></script>
         <script>
-            var slideIndex = 0;
-
-            function progressSlide(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let slides = document.querySelectorAll(".slide");
-                let demos = document.querySelectorAll('.demo');
-                if (n == slides.length) {
-                    n = 0;
-                    slideIndex = 0;
-                } else if (n < 0) {
-                    n = slides.length - 1;
-                    slideIndex = slides.length - 1;
-                }
-                let index = 0;
-                slides.forEach((slide) => {
-                    if (index != n) {
-                        slide.style.display = "none";
-                        demos[index].classList.remove("act");
-                    } else {
-                        slide.style.display = "block";
-                        demos[index].classList.add("act");
-                    }
-                    index++;
-                });
-            }
-
             function main() {
                 navSlide();
                 toTopIn();

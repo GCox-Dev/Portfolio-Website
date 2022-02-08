@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Meta Data -->
-        <title>Finals Week</title>
+        <title></title>
         <meta charset="UTF-8">
         <meta name="author" content="Grant Cox">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
@@ -65,39 +65,29 @@
         </section>
         <article class="article">
             <code class="title-text">
-                Finals Week
+                
             </code>
             <div class="section">
-                <p>Finals Week is an app that contains calculators most students use during the week of finals. This includes a final grade calculator inspired by RogerHub, a semester GPA calculator, and a cumulative GPA calculator. These tools can help you to prioritize which class you need to study for the most. If you only need a 40% on one final to keep your A, but a 92% in another class, you should focus your efforts on that other class. Once you plan out what classes you need to study for, you can use the built in study timer to assist your studying.</p>
-                <p>The app contains a home menu, where you can navigate to the numerous tools the app offers. On one of the calculator tabs will bring you to the respective calculator, where you can enter your numbers, and get a result.</p>
+                <p></p>
             </div>
             <code class="header-text">Pictures</code>
             <div class="slide-show">
-                <div class="slide"><img src="assets/img1.jpg"></div>
-                <div class="slide"><img src="assets/img2.jpg"></div>
-                <div class="slide"><img src="assets/img3.jpg"></div>
-                <div class="slide"><img src="assets/img4.jpg"></div>
+                <!-- <div class="slide"><img src="assets/img1.jpg"></div> -->
                 <a class="prev" onclick="progressSlide(-1)"><i class="fas fa-chevron-left"></i></a>
                 <a class="next" onclick="progressSlide(1)"><i class="fas fa-chevron-right"></i></a>
                 <div class="demo-container">
-                    <img class="demo" src="assets/img1.jpg" onclick="currentSlide(0)">
-                    <img class="demo" src="assets/img2.jpg" onclick="currentSlide(1)">
-                    <img class="demo" src="assets/img3.jpg" onclick="currentSlide(2)">
-                    <img class="demo" src="assets/img4.jpg" onclick="currentSlide(3)">
+                    <!-- <img class="demo" src="assets/img1.jpg" onclick="currentSlide(0)"> -->
                 </div>
             </div>
             <code class="header-text">Design Process</code>
             <div class="section">
-                <p>This was the first app that I ever made, and thus came with its challenges. First I had to learn to actually program apps. I chose the Flutter API made by google. This API uses Dart, an easy to learn programming language, a mix of JS and Java. The API uses a nested structure similar to HTML, which allows you to do almost anything. Along with extensive documentation and a couple YouTube tutorials, learning how to code apps came quick. I had a working prototype of this app working within a couple days.</p>
-                <p>After this I entered the phase that most new developers will experience: feature hell. The original app idea was to turn the popular RogerHub website into an app that I could use on my phone, however more and more features were eventually added.</p>
-                <p>Eventually I neared the end of development. At this point I started testing for bugs, typos, and any other things that would ruin the user experience. It took a while to figure out how to upload the app to the app store. Unfortunately the Apple app store was out of my budget, but the google play store offered a streamlined process that allowed me to finally have my app go live.</p>
+                <p></p>
             </div>
             <code class="header-text">Conclusion</code>
             <div class="section">
-                <p>Being my first ever mobile app, I’m pretty happy with the final app. However the app is packed with too many features. It will be a future goal of mine to renovate the app. In doing so I will be removing some unnecessary features, as well as adding new ones to streamline the app. This includes combining the cumulative gpa and semester gpa calculators, removing the basic calculator, and redoing the study timer. In addition to this I will be creating an accompanying website that can link to your phone using an account system, however this will not be necessary to use the app.</p>
+                <p></p>
             </div>
-            <div class="section"><a target="_blank" href="https://github.com/GCox-Dev/Finals_Week">Code</a></div>
-            <div class="section"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.grant.gradehub">Download</a></div>
+            <div class="section"><a target="_blank" href="">Code</a></div>
         </article>
         <footer class="one-section">
             <div class="socials">
@@ -127,12 +117,11 @@
                 navSlide();
                 toTopIn();
                 callToAction();
-                titleAnimation('Finals Week');
+                titleAnimation('');
                 onScroll([toTopIn]);
-                showSlides(0);
                 button('to-top', () => sendTo('header', 1000));
                 button('call-to-action', () => sendTo('article', 1000));
-                //showSlides(slideIndex);
+                showSlides(slideIndex);
             }
 
             main();

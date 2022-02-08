@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Meta Data -->
         <title>Amazing Gravity</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Grant Cox">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <!-- Linking of External Files -->
+        <link rel="shortcut icon" tpye="image/x-icon" href="../../assets/favicon.ico">
+        <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/posts.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/3abbd89c02.js" crossorigin="anonymous"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTYT7KHMTW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QXWQG34W3L');
+        </script>
+
     </head>
     <body>
-        <h1>This site is currently under construction</h1>
-        <h1>Try my <a href="https://gcox.dev">Portfolio Website</a></h1>
-        <h1>Or you can go to my old <a href="https://grantengineeringportfolio.weebly.com/amazing-gravity.html">blog post</a> for the project</h1>
+        <section class="header">
+            <nav class="nav-bar">
+                <div class="site-identity">
+                    <a href="../" class="site-link">
+                        <img class="site-logo" src="../../assets/logo.svg">
+                        <h3>portfolio</h3>
+                    </a>
+                </div>
+                <div class="spacer"></div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../../">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../projects/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="../../">About</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+            <canvas class="header-animation">
+            </canvas>
+            <div class="header-content">
+                <code class="header-title">
+                </code>
+                <i class="fas fa-chevron-down call-to-action"></i>
+            </div>
+        </section>
+        <article class="article">
+            <code class="title-text">
+                Amazing Gravity
+            </code>
+            <div class="section">
+                <p>The aMazing Gravity arcade game was created as my final project in the digital electronics class at my highschool. Using an arduino, LEDs, buttons, switches, an and gate IC, a buzzer, and a motor, me and my partner created a unique arcade game consisting of two parts.</p>
+                <p>The first part the player must navigate a ball through a maze using the two input buttons. The player has 30 seconds to do so before the game timer ends. If the player successfully drops the ball out of the maze into the second part. The ball enters a plinko inspired zone, where the ball can fall into any of the five scoring areas. The closer to the middle the ball lands, the more points are awarded. If the ball does not manage to exit the maze within the 30 seconds, the game is over, and no points are awarded.</p>
+            </div>
+            <code class="header-text">Pictures</code>
+            <div class="slide-show">
+                <div class="slide"><img src="assets/img1.jpg"></div>
+                <div class="slide"><img src="assets/img2.jpg"></div>
+                <div class="slide"><img src="assets/img3.jpg"></div>
+                <div class="slide"><img src="assets/img4.jpg"></div>
+                <div class="slide"><img src="assets/img5.jpg"></div>
+                <div class="slide"><img src="assets/img6.jpg"></div>
+                <div class="slide"><img src="assets/img7.jpg"></div>
+
+                <a class="prev" onclick="progressSlide(-1)"><i class="fas fa-chevron-left"></i></a>
+                <a class="next" onclick="progressSlide(1)"><i class="fas fa-chevron-right"></i></a>
+                <div class="demo-container">
+                    <img class="demo" src="assets/img1.jpg" onclick="currentSlide(0)">
+                    <img class="demo" src="assets/img2.jpg" onclick="currentSlide(1)">
+                    <img class="demo" src="assets/img3.jpg" onclick="currentSlide(2)">
+                    <img class="demo" src="assets/img4.jpg" onclick="currentSlide(3)">
+                    <img class="demo" src="assets/img5.jpg" onclick="currentSlide(4)">
+                    <img class="demo" src="assets/img6.jpg" onclick="currentSlide(5)">
+                    <img class="demo" src="assets/img7.jpg" onclick="currentSlide(6)">
+                </div>
+            </div>
+            <code class="header-text">Video</code>
+            <iframe class="video" src="https://www.youtube.com/embed/HO_dj5Zoh-o?playlist=HO_dj5Zoh-o&loop=1&mute=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <code class="header-text">Design Process</code>
+            <div class="section">
+                <p>This version of the project was actually the third (see links below), being the culmination of two different classes, and three different projects, each building on eachother. I was not a part of the first two projects, and thus had no contribution to the physical build, and the graphics. This was the work of my partner whose website you can find below. She designed and built the maze, and everything else other than the electronics.</p>
+                <p>That is where I came in. The state of the project when I joined the group was at a good point of development, coming from the previous machine control project in a previous class. However this meant that it utilized the VEX system of parts mentioned in a previous <a class="in-text" target="_blank" href="../cyclone/">post</a>. This system has its limitations, so by taking out the old electronics and using an arduino to drive the project I was able to implement new features.</p>
+                <p>This included a new controller system with a start button, two input buttons, and a timer LED. This new controller was an improvement over the old one, using less inputs. The more powerful arduino microcontroller provided for more advanced software that could reduce the amount of inputs. The old system used a separate button that would let the operator of the game reset the whole maze. The new software however allowed the operator to just hold down the start button for a few seconds. Other new features included  an LED and Buzzer that would progressively flash / buzz faster and faster as the timer creeped down. As opposed to just a constantly flashing LED.</p>
+                <p>There were some design challenges while making this project. First of all being the motor, which eventually required a motor controller to provide enough current to move the maze. In addition we had to find a ball that was light enough for the maze, but heavy enough to depress the limit switches. This required me and my partner to make balls out of ping pong balls and clay to make the perfect weight.</p>
+            </div>
+            <code class="header-text">Circuit</code>
+            <img class="image" src="assets/circuit.jpg">
+            <code class="header-text">Conclusion</code>
+            <div class="section">
+                <p>I was not too happy with the result of this project. Everything should’ve gone off without a hitch, but first our original motor controllers didn’t work. Then when everything was finished we had the issue with the ball. And to top all of that off, when he had finally gotten it finished and filmed, a resistor on the arduino fried itself for unknown reasons. This rendered the project not functional</p>
+            </div>
+            <div class="section"><a target="_blank" href="https://armbrusterengineering.weebly.com/arcade-project.html">aMazing Gravity v1</a></div>
+            <div class="section"><a target="_blank" href="https://armbrusterengineering.weebly.com/machine-control-project.html">aMazing Gravity v2</a></div>
+            <div class="section"><a target="_blank" href="https://armbrusterengineering.weebly.com/updated-arcade-project.html">Partners Website</a></div>
+            <div class="section"><a target="_blank" href="https://github.com/grantcox22/aMazingGravity">Code</a></div>
+        </article>
+        <footer class="one-section">
+            <div class="socials">
+                <code>Follow Me:</code>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/grant-cox-545300226/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gcoxdev/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/gcox-dev" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto: gcoxdev@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <i class="fas fa-chevron-up to-top"></i>
+        <script tpye="text/javascript" src="../../javascript/canvasanimation.js"></script>
+        <script tpye="text/javascript" src="../../javascript/index.js"></script>
+        <script tpye="text/javascript" src="../../javascript/post.js"></script>
+        <script>
+
+            function main() {
+                navSlide();
+                toTopIn();
+                callToAction();
+                titleAnimation('Amazing Gravity');
+                onScroll([toTopIn]);
+                button('to-top', () => sendTo('header', 1000));
+                button('call-to-action', () => sendTo('article', 1000));
+                showSlides(slideIndex);
+            }
+
+            main();
+        </script>
     </body>
 </html>

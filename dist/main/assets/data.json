@@ -22,7 +22,7 @@
 		"number" : 3,
 		"img" : "",
 		"page_link" : "https://gcox.dev/projects/amazing-gravity/",
-		"intro" : "aMazing Gravity was made for the final project of the Digital Electronics class at my high school. This was the third version of this game, and was upgraded through multiple different projects. Being the final project, it was a combination of all the skills we had learned throughout the school year. The goal of the game was to get a ball through a spinning maze, and you would get points based on where the ball landed, within a certain time limit. The game used an Arduino Nano to control the game logic. It used button inputs in order to control the maze, limit switches to determine points, and had multiple LEDs and a buzzer in order to provide user feedback.",
+		"intro" : "The aMazing Gravity arcade game was created as my final project in the digital electronics class at my highschool. Using an arduino, LEDs, buttons, switches, an and gate IC, a buzzer, and a motor, me and my partner created a unique arcade game consisting of two parts. ",
 		"featured" : false,
 		"category" : "arduino"
 	},

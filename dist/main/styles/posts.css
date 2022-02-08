@@ -39,13 +39,22 @@ p, a{
     margin:15px 5px 15px 5px;
 }
 
+.in-text {
+    margin: 0px;
+}
+
 
 a:visited {
     color:#FFF;
 }
 
 ul {
-    margin: 10px 0px 10px 30px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
     list-style-type:square;
 }
 
@@ -71,9 +80,15 @@ li {
     background-color: #00000044;
 }
 
+.video {
+    width: clamp(350px, 60%, 60%);
+    aspect-ratio: 16 / 9;
+}
+
 .slide {
     display: none;
     padding: 0px;
+
 }
 
 .slide img {
@@ -113,7 +128,8 @@ li {
 }
 
 .demo {
-    height: 20vh;
+    width:70px;
+    height:70px;
     opacity: 0.5;
     margin-left: 2.5px;
     margin-right: 2.5px;
