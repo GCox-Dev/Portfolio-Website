@@ -43,14 +43,13 @@
 		"title" : "Portfolio",
 		"number" : 6,
 		"page_link" : "https://gcox.dev/projects/portfolio",
-		"intro" : "This website is a showcase of my abilities in computer science by displaying projects in web development, app development, arduino, small JavaScript games, and fun experiments. My Portfolio Website is my first full scale website using HTML, CSS, and JavaScript. While I had previous experience with HTML, I had never made anything to this scale. I also had very limited experience in JavaScript, however through a long development process, I now have pretty extensive abilities within the language. This is the third version of this website,between one refactor, and a complete loss of data, including its source code, this is the third and final version.",
+		"intro" : "This website is a showcase of my abilities in computer science. I post any cool project I do on the projects page. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to my online audience.",
 		"featured" : true,
 		"category" : "website"
 	},
 	{
 		"title": "N-Body Simulator",
 		"number" : 7,
-		
 		"page_link" : "https://gcox.dev/projects/n-body",
 		"intro" : "This project is coming soon...",
 		"featured" : false,

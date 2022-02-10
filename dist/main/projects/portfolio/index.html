@@ -1,11 +1,125 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Portfolio</title>
+        <!-- Meta Data -->
+        <title>portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Grant Cox">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <!-- Linking of External Files -->
+        <link rel="shortcut icon" tpye="image/x-icon" href="../../assets/favicon.ico">
+        <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/posts.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/3abbd89c02.js" crossorigin="anonymous"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTYT7KHMTW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QXWQG34W3L');
+        </script>
+
     </head>
     <body>
-        <h1>This site is currently under construction</h1>
-        <h1>Try my <a href="https://gcox.dev">Portfolio Website</a></h1>
-        <h1>Check this site out live at <a href="https://gcox.dev">https://gcox.dev</a></h1>
+        <section class="header">
+            <nav class="nav-bar">
+                <div class="site-identity">
+                    <a href="../" class="site-link">
+                        <img class="site-logo" src="../../assets/logo.svg">
+                        <h3>portfolio</h3>
+                    </a>
+                </div>
+                <div class="spacer"></div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="../../">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../projects/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="../../">About</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+            <canvas class="header-animation">
+            </canvas>
+            <div class="header-content">
+                <code class="header-title">
+                </code>
+                <i class="fas fa-chevron-down call-to-action"></i>
+            </div>
+        </section>
+        <article class="article">
+            <code class="title-text">
+                Portfolio
+            </code>
+            <div class="section">
+                <p>This website is a showcase of my abilities in computer science. I post any cool project I do on the projects page. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to my online audience.</p>
+            </div>
+            <code class="header-text">Design Process</code>
+            <div class="section">
+                <p>This website is the first full scale production website I have created from scratch. I didn’t use any javascript frameworks to create it, so I had to use a lot of custom vanilla javascript. While I had experimented with small-scale HTML websites before, I hadn’t much experience in javascript, so it was a very new thing for me.</p>
+                <p>This is actually the third version of the site. The first version was a simple prototype that I had been working on for a couple weeks when I decided to make it functional. This required an entire refactor of the site. This is where the second version of the website came in. This version was a little bit more complex and had more functionality built in. However while working on it on and off for a couple months I never backed it up to github. So when my old laptop stopped working, all the data was lossed. This is where the current version of the website was started. This is the current version, and had to be completely rewritten.</p>
+                <p>Luckily the past two versions gave me enough knowledge in HTML, CSS, and JavaScript that I could create a pretty good looking website at that point. There are many systems built into the JavaScript that I had to write. These include the moving particle animation, procedurally generating cards for the posts from a JSON input, and a system to search through the posts in the projects page.</p>
+                <p>Eventually came the time where the website was ready for release. I spent days looking for hosting services, when I came across Firebase. Firebase is free up to a point, so I could host my site for only the cost of the domain. In addition I could eventually use the database functions for future projects.</p>
+                <p>Finally my dream project was finished, and out there for all the world to see. I still am in active development of the website, releasing new and improved features every once in a while, and continuing to post new posts. However the main functionality of the website is finished, I hope you enjoy it!</p>
+            </div>
+            <code class="header-text">Conclusion</code>
+            <div class="section">
+                <p>This project has been one of my favorite projects to work on. I have dreamed of having a website of my one for years, and finally I have one. Computer Science is one of my biggest passions. Despite having many hobbies, most of them involve computers. So to have a website where I can post about it is a source of great pride for me.</p>
+            </div>
+            <div class="section"><a target="_blank" href="https://github.com/GCox-Dev/Portfolio-Website">Code</a></div>
+        </article>
+        <footer class="one-section">
+            <div class="socials">
+                <code>Follow Me:</code>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/grant-cox-545300226/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gcoxdev/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/gcox-dev" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto: gcoxdev@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <i class="fas fa-chevron-up to-top"></i>
+        <script tpye="text/javascript" src="../../javascript/canvasanimation.js"></script>
+        <script tpye="text/javascript" src="../../javascript/index.js"></script>
+        <script tpye="text/javascript" src="../../javascript/post.js"></script>
+        <script>
+            function main() {
+                navSlide();
+                toTopIn();
+                callToAction();
+                titleAnimation('Portfolio');
+                onScroll([toTopIn]);
+                button('to-top', () => sendTo('header', 1000));
+                button('call-to-action', () => sendTo('article', 1000));
+                showSlides(slideIndex);
+            }
+
+            main();
+        </script>
     </body>
 </html>
