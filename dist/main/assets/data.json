@@ -31,7 +31,7 @@
 		"number" : 4,
 		"img" : "",
 		"page_link" : "https://gcox.dev/projects/to-do-list",
-		"intro" : "Homework: To Do List is an app inspired by a project one of my class mates created. The basic premise of the app is that you can add various school related tasks to your overall list. These tasks can be assigned due dates, priority, and a category based on what type of class the task is from. You could then sort by these properties of each task. This was the second app I have released, and building from knowledge acquired from my last app, it is a big improvement. The user experience is greatly streamlined, and there is finally data serialization, which allows the user to save their tasks after the app is closed.",
+		"intro" : "Homework: To Do List an app that allows you to organize and keep track of all of your homework. You can add assignments to your list. Give them a name, due date, a subject, and finally a priority. These properties allow you to sort through your assignments. If you’d like to knock out an entire subject one night, you can sort by subject. If you’d like to finish the most important assignments first, sort by priority.",
 		"featured" : true,
 		"category" : "mobile app"
 	},
