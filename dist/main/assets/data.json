@@ -2,7 +2,6 @@
     {
 		"title" : "Cyclone",
 		"number" : 1,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/cyclone/",
 		"intro" : "The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone game from most arcades. LEDs move back and forth, and depending on what color LED you land on awards a certain amount of points. Red awards the least amount of points, then yellow, then green with the most.",
 		"featured" : false,
@@ -11,7 +10,6 @@
 	{
 		"title" : "Finals Week",
 		"number" : 2,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/finals-week",
 		"intro" : "Finals Week is an app that contains calculators most students use during the week of finals. This includes a final grade calculator inspired by RogerHub, a semester GPA calculator, and a cumulative GPA calculator. These tools can help you to prioritize which class you need to study for the most. Once you plan out what classes you need to study for, you can use the built in study timer to assist your studying.",
 		"featured" : true,
@@ -20,7 +18,6 @@
 	{
 		"title" : "Amazing Gravity",
 		"number" : 3,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/amazing-gravity/",
 		"intro" : "The aMazing Gravity arcade game was created as my final project in the digital electronics class at my highschool. Using an arduino, LEDs, buttons, switches, an and gate IC, a buzzer, and a motor, me and my partner created a unique arcade game consisting of two parts. ",
 		"featured" : false,
@@ -29,7 +26,6 @@
 	{
 		"title" : "To Do List",
 		"number" : 4,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/to-do-list",
 		"intro" : "Homework: To Do List an app that allows you to organize and keep track of all of your homework. You can add assignments to your list. Give them a name, due date, a subject, and finally a priority. These properties allow you to sort through your assignments. If you’d like to knock out an entire subject one night, you can sort by subject. If you’d like to finish the most important assignments first, sort by priority.",
 		"featured" : true,
@@ -38,16 +34,14 @@
 	{
 		"title" : "Ultrasound First",
 		"number" : 5,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/ultrasound-first",
-		"intro" : "Ultrasound First is an ultrasound clinic owned and operated by my family. We specialize in musculoskeletal ultrasound, which serves as a cheaper alternative to MRIs. This was my first full scale professional website. I was hired to revamp, and maintain the website, as well as post up to date educational articles. I accomplished this by using a Wordpress theme as the base, and custom HTML elements in order to make the website have character of its own. This was one of my first experiences with Wordpress, and  it makes things much easier to develop with its wide range of built in tools.",
+		"intro" : "Ultrasound First is a family owned and operated medical practice. We specialize in musculoskeletal ultrasound, a type of ultrasound focusing on bones, muscles, tendons, ligaments and soft tissues. This is often a cheaper alternative to more expensive imaging methods like MRI and CAT scans. I am currently employed at Ultrasound First to work on and maintain the website, as well as managing our social media presence.",
 		"featured" : true,
 		"category" : "website"
 	},
 	{
 		"title" : "Portfolio",
 		"number" : 6,
-		"img" : "",
 		"page_link" : "https://gcox.dev/projects/portfolio",
 		"intro" : "This website is a showcase of my abilities in computer science by displaying projects in web development, app development, arduino, small JavaScript games, and fun experiments. My Portfolio Website is my first full scale website using HTML, CSS, and JavaScript. While I had previous experience with HTML, I had never made anything to this scale. I also had very limited experience in JavaScript, however through a long development process, I now have pretty extensive abilities within the language. This is the third version of this website,between one refactor, and a complete loss of data, including its source code, this is the third and final version.",
 		"featured" : true,
@@ -56,7 +50,7 @@
 	{
 		"title": "N-Body Simulator",
 		"number" : 7,
-		"img" : "",
+		
 		"page_link" : "https://gcox.dev/projects/n-body",
 		"intro" : "This project is coming soon...",
 		"featured" : false,
