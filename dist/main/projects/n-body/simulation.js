@@ -4,11 +4,13 @@ ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 ctx.fillStyle = "white";
 
-const G = 1;
-const S = 0.98;
-const DT = 0.05;
-const N = 20;
-const SCALE = 3;
+var G = 1;
+var S = 0.98;
+var DT = 0.01;
+var N = 40;
+var SCALE = 3;
+var C = false;
+
 
 let colors = [
     '#1b8036',
@@ -49,7 +51,7 @@ class Body {
             y: velYInitial
         }
         this.mass = initialMass;
-        this.radius = Math.pow(this.mass, 1/SCALE) / 2;
+        this.radius = Math.log(this.mass * SCALE) / 2;
         this.acc = {
             x: 0,
             y: 0
@@ -65,14 +67,8 @@ class Body {
     }
 
     update() {
+        this.radius = Math.pow(this.mass, 1/3) * Math.log(SCALE);
 
-        // if (this.pos.x > canvas.width || this.pos.x < 0) {
-        //     this.vel.x *= -1;
-        // } if (this.pos.y > canvas.height || this.pos.y < 0) {
-        //     this.vel.y *= -1;
-        // }
-
-        this.radius = Math.pow(this.mass, 1/SCALE) / 2;
 
         this.vel.x += this.acc.x * (DT / 2);
         this.vel.y += this.acc.y * (DT / 2);
@@ -95,8 +91,8 @@ function init() {
         let x = (Math.random() * innerWidth * 0.8) + innerWidth * 0.1;
         let y = (Math.random() * innerHeight * 0.8) + innerHeight * 0.1;
         let c = Math.floor(Math.random() * (colors.length));
-        let velX = 0;//(Math.random() * 30) - 15;
-        let velY = 0;//(Math.random() * 30) - 15;
+        let velX = (Math.random() * 30) - 15;
+        let velY = (Math.random() * 30) - 15;
         bodies.push(new Body(x, y, velX, velY, mass, colors[c]));
     }
 }
@@ -111,33 +107,69 @@ function animate() {
         body1.acc.x = 0;
         body1.acc.y = 0;
         bodies.forEach((body2, j) => {
+
+
+
             if (i != j) {
                 let dx = body2.pos.x - body1.pos.x;
                 let dy = body2.pos.y - body1.pos.y;
-                if (Math.sqrt((dx * dx) + (dy * dy)) <= body1.radius + body2.radius) {
-                    let mass = body1.mass + body2.mass;
-                    let velFinal = {
-                        x: ((body1.mass * body1.vel.x) + (body2.mass * body2.vel.x)) / mass,
-                        y: ((body1.mass * body1.vel.y) + (body2.mass * body2.vel.y)) / mass
-                    }
-                    if (body1.mass > body2.mass) {
-                        body1.mass = mass;
-                        body1.vel = velFinal;
-                        bodies.splice(j, 1);
-                    } else {
-                        body2.mass = mass;
-                        body2.vel = velFinal;
-                        bodies.splice(i, 1);
+                if (C) {
+                    if (Math.sqrt((dx * dx) + (dy * dy)) <= body1.radius + body2.radius) {
+                        let m = body1.mass + body2.mass;
+                        let velFinal = {
+                            x: ((body1.mass * body1.vel.x) + (body2.mass * body2.vel.x)) / m,
+                            y: ((body1.mass * body1.vel.y) + (body2.mass * body2.vel.y)) / m
+                        }
+                        if (body1.mass > body2.mass) {
+                            body1.mass = m;
+                            body1.vel = velFinal;
+                            bodies.splice(j, 1);
+                        } else {
+                            body2.mass = m;
+                            body2.vel = velFinal;
+                            bodies.splice(i, 1);
+                        }
                     }
                 }
                 let dist = Math.sqrt((dx * dx) + (dy * dy) + (S*S));
-
                 body1.acc.x += G * body2.mass * dx / Math.pow(dist, 2);
                 body1.acc.y += G * body2.mass * dy / Math.pow(dist, 2);
             }
         });
         body1.update();
     });
+}
+
+let num = document.querySelector('.num');
+num.oninput = function() {
+    N = this.value;
+    document.querySelector('.number').innerHTML = `Number: ${this.value}`;
+    init();
+}
+
+let grav = document.querySelector('.grav');
+grav.oninput = function() {
+    let v = this.value / 10;
+    G = v;
+    document.querySelector('.gravity').innerHTML = `Gravity: ${v}`;
+}
+
+let spd = document.querySelector('.spd');
+spd.oninput = function() {
+    let v = this.value / 100;
+    DT = v;
+    document.querySelector('.speed').innerHTML = `Speed: ${v}`;
+}
+
+let scl = document.querySelector('.scl');
+scl.oninput = function() {
+    SCALE = this.value;
+    document.querySelector('.scale').innerHTML = `Scale: ${this.value}`;
+}
+
+let col = document.querySelector('.col');
+col.onchange = function() {
+    C = col.checked;
 }
 
 init();

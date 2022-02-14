@@ -2,10 +2,11 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: red;
+    background-color: #000;
 }
 
 .canvas {
@@ -15,4 +16,53 @@ body {
     position: absolute;
     top:0;
     left:0;
+}
+
+.nav {
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 10px;
+    width: 70px;
+}
+
+.icon {
+    color: white;
+    margin: 5px;
+    font-size:1.2rem;
+}
+
+.settings {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(58, 58, 58);
+}
+
+li {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    align-items:center;
+}
+
+.slider {
+    background: rgb(187, 187, 187); 
+}
+
+.label {
+    color: rgb(200, 200, 200); 
+    margin-right: 5px;
+}
+
+.code {
+    color: #FFF;
+    font-size:1.6rem;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+a:visited {
+    color:#FFF;
 }
