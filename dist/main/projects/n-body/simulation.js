@@ -100,17 +100,23 @@ function init() {
 function animate() {
     requestAnimationFrame(animate);
 
+    let mass = 0;
+    for (let i = 0; i < bodies.length; i++) {
+        mass+=bodies[i].mass;
+    }
+    console.log(mass);
+
     time++;
     ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-    bodies.forEach((body1, i) => {
+    for (let i = 0; i < bodies.length; i++) {
+        let body1 = bodies[i]
         body1.acc.x = 0;
         body1.acc.y = 0;
-        bodies.forEach((body2, j) => {
+        for (let j = 0; j < bodies.length; j++) {
+            let body2 = bodies[j];
 
-
-
-            if (i != j) {
+            if (body1 != body2) {
                 let dx = body2.pos.x - body1.pos.x;
                 let dy = body2.pos.y - body1.pos.y;
                 if (C) {
@@ -135,9 +141,9 @@ function animate() {
                 body1.acc.x += G * body2.mass * dx / Math.pow(dist, 2);
                 body1.acc.y += G * body2.mass * dy / Math.pow(dist, 2);
             }
-        });
+        }
         body1.update();
-    });
+    }
 }
 
 let num = document.querySelector('.num');

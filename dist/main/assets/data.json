@@ -12,7 +12,7 @@
 		"number" : 2,
 		"page_link" : "https://gcox.dev/projects/finals-week",
 		"intro" : "Finals Week is an app that contains calculators most students use during the week of finals. This includes a final grade calculator inspired by RogerHub, a semester GPA calculator, and a cumulative GPA calculator. These tools can help you to prioritize which class you need to study for the most. Once you plan out what classes you need to study for, you can use the built in study timer to assist your studying.",
-		"featured" : true,
+		"featured" : false,
 		"category" : "mobile app"
 	},
 	{
@@ -44,7 +44,7 @@
 		"number" : 6,
 		"page_link" : "https://gcox.dev/projects/portfolio",
 		"intro" : "This website is a showcase of my abilities in computer science. I post any cool project I do on the projects page. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to my online audience.",
-		"featured" : true,
+		"featured" : false,
 		"category" : "website"
 	},
 	{
@@ -52,7 +52,15 @@
 		"number" : 7,
 		"page_link" : "https://gcox.dev/projects/n-body",
 		"intro" : "An N-body simulation simulates gravitational forces on N amount of bodies. The gravitaional force on a body is equal to the sum of G * (m₁ + m₂) / r² where G is equal to a gravitational constant, and r is equal to the distance between the two bodies.",
-		"featured" : false,
+		"featured" : true,
 		"category" : "other"
+	},
+	{
+		"title": "Snake Game",
+		"number" : 8,
+		"page_link" : "https://gcox.dev/projects/snake",
+		"intro" : "This is a fully functional Snake browser game with in javascript. Your highscores are automatically stored in the browser, so no need to worry about loosing your best scores. In addition, you can change your color scheme by clicking. Enjoy!",
+		"featured" : true,
+		"category" : "game"
 	}
 ]

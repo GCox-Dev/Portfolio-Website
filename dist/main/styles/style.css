@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "VT323";
+    src: url("../../assets/VT323-Regular.ttf");
+}
+
 html {
     overflow-x: hidden;
 }
