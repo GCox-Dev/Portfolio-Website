@@ -135,7 +135,6 @@ function init() {
     } else {
         highscore = 0;
     }
-    console.log(highscore);
 
     window.addEventListener("keydown", onKeyDown, false);
 

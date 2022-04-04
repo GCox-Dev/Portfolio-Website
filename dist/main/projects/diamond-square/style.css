@@ -1,0 +1,38 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to bottom, #0c0c0c, #111111);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.canvas {
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+}
+
+.nav {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.icon {
+    color: white;
+    margin: 5px;
+    font-size:1.2rem;
+}
+
+@font-face {
+    font-family: "VT323";
+    src: url("../../assets/VT323-Regular.ttf");
+}

@@ -32,6 +32,10 @@ body {
     font-size:1.2rem;
 }
 
+a {
+    cursor: pointer;
+}
+
 .settings {
     position: absolute;
     padding: 5px;

@@ -28,7 +28,7 @@
 		"number" : 4,
 		"page_link" : "https://gcox.dev/projects/to-do-list",
 		"intro" : "Homework: To Do List an app that allows you to organize and keep track of all of your homework. You can add assignments to your list. Give them a name, due date, a subject, and finally a priority. These properties allow you to sort through your assignments. If you’d like to knock out an entire subject one night, you can sort by subject. If you’d like to finish the most important assignments first, sort by priority.",
-		"featured" : true,
+		"featured" : false,
 		"category" : "mobile app"
 	},
 	{
@@ -62,5 +62,13 @@
 		"intro" : "This is a fully functional Snake browser game with in javascript. Your highscores are automatically stored in the browser, so no need to worry about loosing your best scores. In addition, you can change your color scheme by clicking. Enjoy!",
 		"featured" : true,
 		"category" : "game"
+	},
+	{
+		"title": "Diamond Square",
+		"number" : 8,
+		"page_link" : "https://gcox.dev/projects/snake",
+		"intro" : "The diamond square algorithm allows one to create randomly generated height maps with smooth transitions without using perlin noise. Random values are found for the corners of the map, and those values are averaged out through out the whole map recursivley inorder to create smooth transitions between values.",
+		"featured" : true,
+		"category" : "other"
 	}
 ]
