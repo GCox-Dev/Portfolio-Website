@@ -127,7 +127,7 @@ class Map {
 
 }
 
-let camera = new Camera(1);
+let camera = new Camera(0.25);
 let map = new Map(8, 100);
 
 function render() {

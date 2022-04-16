@@ -66,7 +66,7 @@
 	{
 		"title": "Diamond Square",
 		"number" : 8,
-		"page_link" : "https://gcox.dev/projects/snake",
+		"page_link" : "https://gcox.dev/projects/diamond-square",
 		"intro" : "The diamond square algorithm allows one to create randomly generated height maps with smooth transitions without using perlin noise. Random values are found for the corners of the map, and those values are averaged out through out the whole map recursivley inorder to create smooth transitions between values.",
 		"featured" : true,
 		"category" : "other"

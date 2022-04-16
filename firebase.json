@@ -8,24 +8,6 @@
         "**/.*",
         "**/node_modules/**"
       ]
-    },
-    {
-      "target": "fnwk",
-      "public": "dist/fnwk",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "todo",
-      "public": "dist/todo",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
     }
   ]
 }
