@@ -1,0 +1,252 @@
+
+@font-face {
+    font-family: VT323;
+    src: url('./assets/VT323-Regular.ttf');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'VT323', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    height:6vh;
+    z-index: 0;
+}
+
+.site-identity {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    flex: 60%;
+}
+
+.site-link {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-logo {
+    width: auto;
+    height: 3.8vh; 
+    min-height: 30px;
+    margin: 2px 2px 2px 20px;
+}
+
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    flex: 40%;
+}
+
+.nav-links li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:0.9rem;
+    letter-spacing: 1.2px;
+    color: #fff;
+    border: solid 2px;
+    border-color: #ffffff00;
+    border-radius:7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px 7px 3px 7px;
+    margin:2px;
+}
+
+.nav-links li a:hover {
+    border: solid 2px;
+    border-color: #fff;
+    transition: border-color .3s ease;
+}
+
+.active {
+    color: #000 !important;
+    background-color: #fff;
+    border-radius:7px;
+}
+
+.active:hover {
+    background-color:#000000;
+    color:#fff !important;
+    transition: color, background-color .3s ease !important;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+	opacity:  0;
+}
+
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-animation {
+    z-index:-1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #0c0c0c);
+}
+
+.header-content {
+    height: 94vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    color: #FFF;
+    font-size:9rem;
+    font-family: 'VT323', monospace;
+    text-align: center;
+}
+
+.call-to-action {
+    color: #FFF;
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 50px;
+    text-shadow: #009F00 1px 1px 1px;
+    cursor: pointer;
+    animation: flashing 2s infinite;
+}
+
+.page {
+    background: linear-gradient(#1c1c1c, #0c0c0c);
+    height: 200vh;
+}
+
+footer {
+    height: 30vh;
+    width: 100vw;
+    background-color: #111111;
+    display: flex;
+}
+
+.socials {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.socials code {
+    text-align: center;
+    color: #FFF;
+    font-family:  'VT323', monospace;
+    font-size: 2.5rem;
+}
+
+.social-links {
+    margin: 15px;
+    display: flex;
+    
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 45px;
+    margin: 0px 20px 0px 20px;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+.social-links a:hover {
+    transform: scale(115%);
+}
+
+
+@media screen and (max-width: 950px) {
+
+    body {
+        width: 100%;
+        height: 200vh;
+    }
+
+	.nav-links {
+        z-index:1;
+		position: absolute;
+		right:  0px;
+		height: 100vh;
+		top: 0;
+		background-color: #000000bb;
+		align-items: center;
+		display: none;
+		flex-direction: column;
+		width: 0%;
+		transition: width 0.5s ease-in, display 0s;
+	}
+	.nav-links li {
+        opacity: 0;
+	}
+
+    .nav-active {
+        width: 50%;
+        display: flex;
+    }
+
+    .nav-active li {
+        opacity: 1;
+    }
+
+	.burger {
+        z-index: 100;
+        margin-right: 20px;
+		display: block;
+        float: right;
+	}
+}
+
+@keyframes flashing {
+    from {
+        opacity: 1;
+    } 75% {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
