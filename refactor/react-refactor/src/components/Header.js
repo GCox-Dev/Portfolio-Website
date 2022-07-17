@@ -8,8 +8,10 @@ export default function Header(props) {
     const canvasRef = useRef(null);
     const ctxRef = useRef(null);
     const header = useRef(null);
+    const headerTitle = useRef(null);
 
     useEffect(() => {
+
         const canvas = canvasRef.current;
         canvas.style.width = window.innerWidth;
         canvas.style.height = window.innerHeight;
@@ -22,6 +24,7 @@ export default function Header(props) {
 
         init();
         animate();
+        doAnimation(0);
 
     }, []);
 
@@ -107,8 +110,8 @@ export default function Header(props) {
             let size = (Math.random() * 1) + 0.5;
             let x = (Math.random() * ((window.innerWidth - size * 2) - (size * 2)) + size * 2);
             let y = (Math.random() * ((window.innerHeight - size * 2) - (size * 2)) + size * 2);
-            let dirX = (Math.random() * 1) - 0.5;
-            let dirY = (Math.random() * 1) - 0.5;
+            let dirX = (Math.random() * 0.5) - 0.25;
+            let dirY = (Math.random() * 0.5) - 0.25;
             let color = '#ffffff';
             particleArray.push(new Particle(x, y, dirX, dirY, size, color));
         }
@@ -171,16 +174,33 @@ export default function Header(props) {
         requestAnimationFrame(animation);
     }
 
+    function typeWriter(src, i, fnCallback) {
+        if (i < src.length) {
+            document.querySelector(".header-title").innerHTML += src.charAt(i);
+            setTimeout(() => typeWriter(src, i+1, fnCallback), 200);
+        } else if (typeof fnCallback == "function") {
+            setTimeout(fnCallback, 800);
+        }
+
+    }
+
+    function doAnimation(i) {
+        if (i < props.titles.length) {
+            let src = props.titles[i];
+            document.querySelector(".header-title").innerHTML = "";
+            typeWriter(src, 0, () => doAnimation(i+1));
+        }
+    }
+
     return (
         <div 
         className='header'
         onMouseMove={(event) => mouseMove(event)}
         onMouseOut={mouseOut()}
         ref={header}>
-            <NavBar />
             <canvas ref={canvasRef} className='header-animation'></canvas>
             <div className='header-content'>
-                <code className='header-title'>{props.title}</code>
+                <code ref={headerTitle} className='header-title'></code>
                 <FaChevronDown onClick={callToAction} className="call-to-action"/>
             </div>
         </div>

@@ -1,15 +1,43 @@
-import React, { useRef, useState } from 'react';
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as Logo } from '../assets/logo.svg';
-import "../index.css";
+import { FaSearch } from 'react-icons/fa';
+import data from '../data.json';
 
 export default function NavBar() {
 
     const [isNavExpanded, setIsNavExpanded] = useState(false);
+    const [filteredData, setFilteredData] = useState([]);
 
-    window.onscroll = () => {
-        if (isNavExpanded) window.scroll(0,0);
-        else return;
+    const searchRef = useRef(null);
+
+    let navigate = useNavigate();
+
+    useEffect(() => {
+        window.onscroll = () => {
+            if (isNavExpanded) window.scroll(0,0);
+            else return;
+        }
+
+        searchRef.current.addEventListener("keyup", (event) => {
+            if (event.keyCode == 13) {
+                navigate(`../results/${event.target.value}`, { replace : true });
+            }
+        });
+    }, []);
+
+    function searchData(event) {
+        const searchTerm = event.target.value.toLowerCase();
+        const newFilter = data.filter((value) => {
+            return (value.title.toLowerCase().includes(searchTerm) || value.category.toLowerCase().includes(searchTerm));
+        });
+
+        if (searchTerm === "") {
+            setFilteredData([]);
+        } else {
+            setFilteredData(newFilter);
+        }
+
     }
 
     return (
@@ -18,14 +46,29 @@ export default function NavBar() {
                 <a href="/"><Logo className="site-logo"/></a>
             </div>
             <ul className={!isNavExpanded ? "nav-links" : "nav-links nav-active"}>
+                <div className="search-container">
+                        <input type="text" ref={searchRef} className='search' required onChange={(event) => {
+                            searchData(event);
+                        }}/>
+                        <FaSearch className='search-icon'/>
+                        {filteredData.length > 0 &&  (
+                        <div className='results'>
+                            {filteredData.map((value) => {
+                                return (
+                                    <a className='result' href={value.page_link} target="_blank">{value.title}</a>
+                                );
+                            })}
+                            </div>
+                        )}
+                </div>
                  <li>
-                    <NavLink activeClassName="active" to="/">Home</NavLink>
+                    <a href="/" className={window.location.pathname == "/" ? 'active' : ''}>Home</a>
                 </li>
                 <li>
-                    <NavLink to="/projects">Projects</NavLink>
+                    <a href="/projects" className={window.location.pathname == "/projects" ? 'active' : ''}>Projects</a>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
+                    <a href="/about" className={window.location.pathname == "/about" ? 'active' : ''}>About</a>
                 </li>
             </ul>
             <div className={!isNavExpanded ? "burger" : "burger toggle"} onClick={() => setIsNavExpanded(!isNavExpanded)}>

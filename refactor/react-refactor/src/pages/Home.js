@@ -4,7 +4,7 @@ import Header from '../components/Header';
 export default function Home () {
     return (
         <div>
-            <Header title="Gcox Dev"/>
+            <Header titles={["Web Dev", "App Dev", "GCox Dev"]}/>
             <div className="page"></div>
         </div>
     );
