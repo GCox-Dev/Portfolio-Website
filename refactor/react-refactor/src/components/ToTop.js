@@ -30,12 +30,14 @@ export default function ToTop() {
         requestAnimationFrame(animation);
     }
 
-    window.onscroll = () => {
-        if (window.pageYOffset >= window.innerHeight * 0.5) {
-            toTopRef.current.style.opacity = 1;
-        }
-        else toTopRef.current.style.opacity = 0;
-    }
+    window.addEventListener('scroll', () => {
+        try {
+            if (window.pageYOffset >= window.innerHeight * 0.5) {
+                toTopRef.current.style.opacity = 1;
+            }
+            else toTopRef.current.style.opacity = 0;
+        } catch (error) {}
+    })
 
     return( 
         <div onClick={toTop} className='to-top' ref={toTopRef}><FaChevronUp /></div>

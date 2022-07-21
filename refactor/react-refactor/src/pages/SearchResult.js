@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
+import Header from '../components/Header';
 import data from '../data.json';
-import image from '../assets/placeholder.png';
 
 
 export default function SearchResult() {
 
-    const [filteredData, setFilteredData] = useState([]);
-    const [lastTerm, setLastTerm] = useState();
+    const [ filteredData, setFilteredData ] = useState([]);
+    const [ lastTerm, setLastTerm ] = useState();
 
     const { term } = useParams();
 
@@ -35,11 +35,12 @@ export default function SearchResult() {
 
     return (
         <div className='page'>
-            <code className='resultsTitle'>{(filteredData.length > 0) ? `Search Results` : 'No Result'}</code>
+            <h1 className='resultsTitle'>{(filteredData.length > 0) ? `Search Results` : 'No Result'}</h1>
             {filteredData.length > 0 && (
                 <div className='projects-container'>
-                    {filteredData.map((value, index) => {
-                        return (<ProjectCard project={value}/>);
+                    {filteredData.map((value, key) => {
+                        console.log(value.image);
+                        return (<ProjectCard project={value} key={key} />);
                     })}
                 </div> 
             )}

@@ -5,6 +5,8 @@
 		"page_link" : "https://gcox.dev/projects/cyclone/",
 		"summary" : "The Cyclone Arcade Game is a project I made in the principles of engineering class at my high school. Using an arduino, LEDs, a LCD, and some buttons I recreated the cyclone game from most arcades. LEDs move back and forth, and depending on what color LED you land on awards a certain amount of points. Red awards the least amount of points, then yellow, then green with the most.",
 		"featured" : false,
+		"image" : "/images/cyclone.svg",
+		"lang" : ["C++"],
 		"category" : "Arduino"
 	},
 	{
@@ -13,15 +15,12 @@
 		"page_link" : "https://gcox.dev/projects/finals-week",
 		"summary" : "Finals Week is an app that contains calculators most students use during the week of finals. This includes a final grade calculator inspired by RogerHub, a semester GPA calculator, and a cumulative GPA calculator. These tools can help you to prioritize which class you need to study for the most. Once you plan out what classes you need to study for, you can use the built in study timer to assist your studying.",
 		"featured" : false,
+		"image" : "/images/finalsweek.svg",
+		"lang" : [
+			"Dart",
+			"Flutter"
+		],
 		"category" : "Mobile App"
-	},
-	{
-		"title" : "Amazing Gravity",
-		"number" : 3,
-		"page_link" : "https://gcox.dev/projects/amazing-gravity/",
-		"summary" : "The aMazing Gravity arcade game was created as my final project in the digital electronics class at my highschool. Using an arduino, LEDs, buttons, switches, an and gate IC, a buzzer, and a motor, me and my partner created a unique arcade game consisting of two parts. ",
-		"featured" : false,
-		"category" : "Arduino"
 	},
 	{
 		"title" : "To Do List",
@@ -29,14 +28,24 @@
 		"page_link" : "https://gcox.dev/projects/to-do-list",
 		"summary" : "Homework: To Do List an app that allows you to organize and keep track of all of your homework. You can add assignments to your list. Give them a name, due date, a subject, and finally a priority. These properties allow you to sort through your assignments. If you’d like to knock out an entire subject one night, you can sort by subject. If you’d like to finish the most important assignments first, sort by priority.",
 		"featured" : false,
+		"image" : "/images/todo.svg",
+		"lang" : [
+			"Dart",
+			"Flutter"
+		],
 		"category" : "Mobile App"
 	},
 	{
 		"title" : "Ultrasound First",
 		"number" : 5,
-		"page_link" : "https://gcox.dev/projects/ultrasound-first",
-		"summary" : "Ultrasound First is a family owned and operated medical practice. We specialize in musculoskeletal ultrasound, a type of ultrasound focusing on bones, muscles, tendons, ligaments and soft tissues. This is often a cheaper alternative to more expensive imaging methods like MRI and CAT scans. I am currently employed at Ultrasound First to work on and maintain the website, as well as managing our social media presence.",
-		"featured" : true,
+		"page_link" : "https://ultrasound-first.com",
+		"summary" : "Ultrasound First is a family owned and operated medical practice, specializing in musculoskeletal ultrasound. This includes muscles, bones, ligaments, and tendons.",
+		"featured" : false,
+		"image" : "/images/ultrasoundfirst.svg",
+		"lang" : [
+			"WordPress",
+			"CSS"
+		],
 		"category" : "Website"
 	},
 	{
@@ -45,6 +54,12 @@
 		"page_link" : "https://gcox.dev/projects/portfolio",
 		"summary" : "This website is a showcase of my abilities in computer science. I post any cool project I do on the projects page. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to my online audience.",
 		"featured" : false,
+		"image" : "/images/portfolio.svg",
+		"lang" : [
+			"JS",
+			"React",
+			"CSS"
+		],
 		"category" : "Website"
 	},
 	{
@@ -53,6 +68,10 @@
 		"page_link" : "https://gcox.dev/projects/n-body",
 		"summary" : "An N-body simulation simulates gravitational forces on N amount of bodies. The gravitaional force on a body is equal to the sum of G * (m₁ + m₂) / r² where G is equal to a gravitational constant, and r is equal to the distance between the two bodies.",
 		"featured" : true,
+		"image" : "/images/n-body.svg",
+		"lang" : [
+			"JS"
+		],
 		"category" : "Other"
 	},
 	{
@@ -61,14 +80,22 @@
 		"page_link" : "https://gcox.dev/projects/snake",
 		"summary" : "This is a fully functional Snake browser game with in javascript. Your highscores are automatically stored in the browser, so no need to worry about loosing your best scores. In addition, you can change your color scheme by clicking. Enjoy!",
 		"featured" : true,
+		"image" : "/images/snake.svg",
+		"lang" : [
+			"JS"
+		],
 		"category" : "Games"
 	},
 	{
 		"title": "Diamond Square",
 		"number" : 8,
-		"page_link" : "https://gcox.dev/projects/diamond-square",
+		"page_link" : "./projects/diamond-square",
 		"summary" : "The diamond square algorithm allows one to create randomly generated height maps with smooth transitions without using perlin noise. Random values are found for the corners of the map, and those values are averaged out through out the whole map recursivley inorder to create smooth transitions between values.",
 		"featured" : true,
+		"image" : "/images/map.svg",
+		"lang" : [
+			"JS"
+		],
 		"category" : "Other"
 	}
 ]

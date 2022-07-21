@@ -5,8 +5,8 @@ import { FiMail } from 'react-icons/fi';
 export default function Footer() {
     return (
         <footer>
-            <div className="socials">
-                <code>Follow Me:</code>
+            <div className="footer-section">
+                <h1>Follow Me:</h1>
                 <div className="social-links">
                     <a href="https://www.linkedin.com/in/grant-cox-545300226/" target="_blank">
                         <FaLinkedin />

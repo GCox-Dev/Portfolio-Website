@@ -15,6 +15,7 @@ export default function NavBar() {
 
     useEffect(() => {
         window.onscroll = () => {
+
             if (isNavExpanded) window.scroll(0,0);
             else return;
         }

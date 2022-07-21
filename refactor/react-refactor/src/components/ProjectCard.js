@@ -1,12 +1,36 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Projects from '../pages/Projects';
 
 export default function ProjectCard(data) {
-    let project = data.project;
+    
+    const { project } = data;
+
+    const summary = () => {
+        let result = "";
+        let intro = project.summary.split("");
+        for (let i = 0; i < intro.length && i < 99; i++) {
+            result += intro[i];
+        }
+        result += intro[99] == " " ? intro[99] : intro[99] + " ";
+        return (<p>{result}<a href={project.page_link}>[...]</a></p>);
+    } 
     return (
         <div className="project-card">
+            <img src={ project.image }/>
             <div className='project-content'>
-                <span className='category'>{project.category}</span>
-                <h1 className='title'>{project.title}</h1>
+                <div className='categories'>
+                    <span className='category'>{project.category}</span>
+                    {project.featured && (
+                        <span className='category'>Featured</span>
+                    )}
+                </div>
+                <a href={project.page_link}>{project.title}</a>
+                {summary()}
+            </div>
+            <div className='project-footer'>
+                    {project.lang.map((value, key) => {
+                        return(<span className='lang'>{value}</span>);
+                    })}
             </div>
         </div>
     );

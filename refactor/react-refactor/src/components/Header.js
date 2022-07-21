@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
+import { typeWriter } from '../components/animations';
 import NavBar from './NavBar'
 
 
@@ -24,7 +25,7 @@ export default function Header(props) {
 
         init();
         animate();
-        doAnimation(0);
+        typeWriter(props.titles, ".header-title", 200);
 
     }, []);
 
@@ -36,7 +37,7 @@ export default function Header(props) {
         radius: 100
     }
 
-    let density = 8000;
+    let density = 7000;
 
     function mouseMove(event) {
         mouse.x = event.pageX;
@@ -83,16 +84,16 @@ export default function Header(props) {
             let distance = Math.sqrt(dx*dx + dy*dy);
             if (distance < mouse.radius) {
                 if (mouse.x < this.x && this.x < window.innerWidth - this.size * 10) {
-                    this.x += 4;
+                    this.x += 5;
                 }
                 if (mouse.x > this.x && this.x > this.size * 10) {
-                    this.x -= 4;
+                    this.x -= 5;
                 }
                 if (mouse.y < this.y && this.y < window.innerHeight - this.size * 10) {
-                    this.y += 4;
+                    this.y += 5;
                 }
                 if (mouse.y > this.y && this.y > this.size * 10) {
-                    this.y -= 4;
+                    this.y -= 5;
                 }
             }
 
@@ -105,7 +106,9 @@ export default function Header(props) {
 
     function init() {
         particleArray = []
-        let numberOfParticles = (window.innerWidth * window.innerHeight) / density;
+        let numberOfParticles = Math.round((window.innerWidth * window.innerHeight) / density);
+        numberOfParticles = (numberOfParticles < 200) ? numberOfParticles : 200;
+        console.log(numberOfParticles);
         for (let i = 0; i < numberOfParticles; i++) {
             let size = (Math.random() * 1) + 0.5;
             let x = (Math.random() * ((window.innerWidth - size * 2) - (size * 2)) + size * 2);
@@ -172,24 +175,6 @@ export default function Header(props) {
         }
     
         requestAnimationFrame(animation);
-    }
-
-    function typeWriter(src, i, fnCallback) {
-        if (i < src.length) {
-            document.querySelector(".header-title").innerHTML += src.charAt(i);
-            setTimeout(() => typeWriter(src, i+1, fnCallback), 200);
-        } else if (typeof fnCallback == "function") {
-            setTimeout(fnCallback, 800);
-        }
-
-    }
-
-    function doAnimation(i) {
-        if (i < props.titles.length) {
-            let src = props.titles[i];
-            document.querySelector(".header-title").innerHTML = "";
-            typeWriter(src, 0, () => doAnimation(i+1));
-        }
     }
 
     return (
