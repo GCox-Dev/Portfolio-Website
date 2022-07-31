@@ -6,7 +6,7 @@ export default function PageSection(props) {
     const sectionRef = useRef(null);
 
     window.addEventListener('load', () => {
-        if (window.scrollY > sectionRef.current.offsetTop - window.innerHeight * 0.25) {
+        if (window.scrollY > sectionRef.current.offsetTop + window.innerHeight * 0.5) {
             sectionRef.current.style.opacity = 1;
             sectionRef.current.style.transform = "translateX(0)";
         }
@@ -14,7 +14,7 @@ export default function PageSection(props) {
 
     window.addEventListener('scroll', () => {
 
-        if (window.scrollY > sectionRef.current.offsetTop - window.innerHeight * 0.25) {
+        if (window.scrollY > sectionRef.current.offsetTop + window.innerHeight * 0.5) {
             sectionRef.current.style.opacity = 1;
             sectionRef.current.style.transform = "translateX(0)";
         }

@@ -40,7 +40,7 @@ export default function SearchResult() {
                 <div className='projects-container'>
                     {filteredData.map((value, key) => {
                         console.log(value.image);
-                        return (<ProjectCard project={value} key={key} />);
+                        return (<ProjectCard project={value} key={key} home={false} />);
                     })}
                 </div> 
             )}

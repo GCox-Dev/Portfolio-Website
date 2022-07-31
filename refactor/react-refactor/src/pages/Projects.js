@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Header from '../components/Header';
 import ProjectCard from '../components/ProjectCard';
 import { FaSistrix } from 'react-icons/fa';
@@ -10,7 +10,7 @@ export default function Projects() {
 
     const [ filteredData, setFilteredData ] = useState(data);
     const [ searchedData, setSearchedData ] = useState(data);
-    const [ currentFilter, setCurrentFilter ] = useState("newest");
+    const [ currentFilter, setCurrentFilter ] = useState("oldest");
 
     const searchRef = useRef(null);
 
@@ -48,6 +48,7 @@ export default function Projects() {
                 }
             }
         }
+
         setFilteredData(result);
         searchData(searchRef.current.value.toLowerCase());
     }
@@ -57,16 +58,13 @@ export default function Projects() {
             return (value.title.toLowerCase().includes(searchTerm) || value.category.toLowerCase().includes(searchTerm));
         });
 
-        if (searchTerm === "") {
+        if (searchTerm === "" || null) {
             setSearchedData(filteredData);
         } else {
             setSearchedData(newFilter);
         }
 
     }
-
-    window.onload = () => {filterData('newest');}
-
     return (
         <div>
             <Header titles={["Projects"]}/>
@@ -81,15 +79,16 @@ export default function Projects() {
                     <div className='filter'>
                         <BsFilterLeft className='filter-icon' />
                         <div className='dropdown'>
-                            <div className={currentFilter == 'newest' ? 'option-selected' : 'option'} onClick={() => {filterData('newest')}}>Newest</div>
                             <div className={currentFilter == 'oldest' ? 'option-selected' : 'option'} onClick={() => {filterData('oldest')}}>Oldest</div>
+                            <div className={currentFilter == 'newest' ? 'option-selected' : 'option'} onClick={() => {filterData('newest')}}>Newest</div>
                             <div className={currentFilter == 'a-z' ? 'option-selected' : 'option'} onClick={() => {filterData('a-z')}}>A-Z</div>
                         </div>
                     </div>
                 </div>
                 <div className='projects-container'>
                     {searchedData.map((value, key) => {
-                        return(<ProjectCard project={value} key={key}/>);
+                        console.log(value);
+                        return(<ProjectCard project={value} key={key} home={true}/>);
                     })}
                 </div>
             </div>

@@ -3,7 +3,7 @@ import Projects from '../pages/Projects';
 
 export default function ProjectCard(data) {
     
-    const { project } = data;
+    const { project, home } = data;
 
     const summary = () => {
         let result = "";
@@ -12,7 +12,7 @@ export default function ProjectCard(data) {
             result += intro[i];
         }
         result += intro[99] == " " ? intro[99] : intro[99] + " ";
-        return (<p>{result}<a href={project.page_link}>[...]</a></p>);
+        return (<p>{result}<a href={project.page_link} target="_blank">[...]</a></p>);
     } 
     return (
         <div className="project-card">
@@ -24,7 +24,7 @@ export default function ProjectCard(data) {
                         <span className='category'>Featured</span>
                     )}
                 </div>
-                <a href={project.page_link}>{project.title}</a>
+                <a href={project.page_link} target="_blank">{project.title}</a>
                 {summary()}
             </div>
             <div className='project-footer'>

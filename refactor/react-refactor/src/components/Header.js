@@ -178,8 +178,7 @@ export default function Header(props) {
     }
 
     return (
-        <div 
-        className='header'
+        <header
         onMouseMove={(event) => mouseMove(event)}
         onMouseOut={mouseOut()}
         ref={header}>
@@ -188,6 +187,6 @@ export default function Header(props) {
                 <code ref={headerTitle} className='header-title'></code>
                 <FaChevronDown onClick={callToAction} className="call-to-action"/>
             </div>
-        </div>
+        </header>
     );
 }

@@ -152,7 +152,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-function layeredText(txt, x, y, color, background) {
+function layeredText(txt, x, y, color, background, ctx) {
     ctx.fillStyle = background;
     ctx.fillText(txt, x+ 5, y);
     ctx.fillStyle = color;

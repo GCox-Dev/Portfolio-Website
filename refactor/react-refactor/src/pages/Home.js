@@ -1,9 +1,9 @@
-import Carousel from '../components/Carousel';
+import Carousel, { ProjectSlide } from '../components/Carousel';
 import Header from '../components/Header';
-import ProjectSlide from '../components/ProjectSlide';
 import ProjectCard from '../components/ProjectCard';
 import PageSection from '../components/PageSection';
 import data from '../data.json';
+import Contact from '../components/Contact';
 
 export default function Home () {
 
@@ -37,7 +37,7 @@ export default function Home () {
                 <PageSection title={"skills"}>
                     <div className='sub-section'>
                         <h4>&#60;web dev&#62;</h4>
-                        <p>Over the years I have used many different tools in order to create websites. I use React for my personal websites, and WordPress for my clients. However I started with plain HTML and CSS with JavaScript for basic animations and functions.</p>
+                        <p>Over the years I have used many different tools in order to create websites. I have used HTML/CSS with vanilla JavaScript, WordPress, and React.</p>
                         <div className='sub-section'>
                             <ul>
                                 <li>HTML</li>
@@ -51,7 +51,7 @@ export default function Home () {
                     </div>
                     <div className='sub-section'>
                         <h4>&#60;app dev&#62;</h4>
-                        <p>Using Dart along side the Flutter API I create mobile apps. Flutter was built by Google, and builds to both Android and Apple. Instead of using native components, Flutter renders custom pixels directly to the phone screen. I have published two apps so far available on the Google Play store.</p>
+                        <p>I use Dart along side the Flutter API to make mobile apps. Flutter was built by Google, and builds to both Android and Apple. Instead of using native components, Flutter renders custom pixels directly to the phone screen. I have published two apps so far available on the Google Play store.</p>
                         <div className='sub-section'>
                             <ul>
                                 <li>Dart</li>
@@ -62,7 +62,7 @@ export default function Home () {
                     </div>
                     <div className='sub-section'>
                         <h4>&#60;electronics&#62;</h4>
-                        <p>As an electrical engineering student I love to tinker with electronics. Using an Arduino accompanied by C++ I can create pretty much anything. This includes robots, arcade games, and security devices to name a few.</p>
+                        <p>As an electrical engineering student I love to tinker with electronics. Using an Arduino and C++ I can create pretty much anything. This includes robots, arcade games, and security devices to name a few.</p>
                         <div className='sub-section'>
                             <ul>
                                 <li>C++</li>
@@ -70,6 +70,9 @@ export default function Home () {
                         </div>
                         <h4>&#60;/electronics&#62;</h4>
                     </div>
+                </PageSection>
+                <PageSection title={"contact"}>
+                    <Contact />
                 </PageSection>
             </div>
         </div>
