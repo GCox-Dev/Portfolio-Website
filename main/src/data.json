@@ -1,0 +1,101 @@
+[
+    {
+		"title" : "Cyclone",
+		"number" : 1,
+		"page_link" : "https://gcox.dev/projects/cyclone/",
+		"summary" : "This Arduino project re-creates a common arcade game found in most arcades. The goal is to stop the moving LED in the middle. It features three game modes, with increasing difficulty and point values. As the LED bounces back and forth the player has the chance to use the green play button in order to stop the LED. Depending on the color of the LED, a certain amount of points are awarded. Point values scale with the difficulty. The player has five tries in order to acquire as many points as possible.",
+		"featured" : false,
+		"image" : "/images/cyclone/cyclone.svg",
+		"lang" : ["C++"],
+		"category" : "Arduino"
+	},
+	{
+		"title" : "Finals Week",
+		"number" : 2,
+		"page_link" : "https://gcox.dev/projects/finals-week/",
+		"summary" : "Finals Week is an app that contains all of the tools you need to effectively get through finals week. Whether that be a final grade calculator, calculators for both cumulative and semester GPA, or a study timer. This app can help you prioritize what classes you need to study for, and ultimately help you build a better study plan.",
+		"featured" : false,
+		"image" : "/images/finals-week/finalsweek.svg",
+		"lang" : [
+			"Dart",
+			"Flutter"
+		],
+		"category" : "Mobile App"
+	},
+	{
+		"title" : "To Do List",
+		"number" : 3,
+		"page_link" : "https://gcox.dev/projects/to-do-list/",
+		"summary" : "To Do List is an app that allows you to organize and keep track of all of your homework. You can add assignments to your list. Give them a name, due date, a subject, and finally a priority. These properties allow you to sort through your assignments. If you’d like to knock out an entire subject one night, you can sort by subject. If you’d like to finish the most important assignments first, sort by priority.",
+		"featured" : false,
+		"image" : "/images/to-do-list/todo.svg",
+		"lang" : [
+			"Dart",
+			"Flutter"
+		],
+		"category" : "Mobile App"
+	},
+	{
+		"title" : "Ultrasound First",
+		"number" : 4,
+		"page_link" : "https://ultrasound-first.com",
+		"summary" : "Ultrasound First is a family owned and operated medical practice, specializing in musculoskeletal ultrasound. This includes muscles, bones, ligaments, and tendons.",
+		"featured" : false,
+		"image" : "/images/ultrasoundfirst.svg",
+		"lang" : [
+			"WordPress",
+			"CSS"
+		],
+		"category" : "Website"
+	},
+	{
+		"title" : "Portfolio",
+		"number" : 5,
+		"page_link" : "https://gcox.dev/projects/portfolio/",
+		"summary" : "This website is a showcase of my computer science projects.. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to the world.",
+		"featured" : false,
+		"image" : "/images/portfolio.svg",
+		"lang" : [
+			"JS",
+			"React",
+			"CSS"
+		],
+		"category" : "Website"
+	},
+	{
+		"title": "N-Body Simulation",
+		"number" : 6,
+		"page_link" : "https://gcox.dev/projects/n-body",
+		"summary" : "A N-Body simulation calculates the gravity for a system of a n amount of bodies. This serves to explore planetary orbits and how planets affect each other. You can click to add a body to the simulation. By clicking and dragging you can give the body an initial velocity. In addition you can alter parameters like initial mass and the gravitational constant.",
+		"featured" : true,
+		"image" : "/images/n-body/n-body.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Other"
+	},
+	{
+		"title": "Snake",
+		"number" : 7,
+		"page_link" : "https://gcox.dev/projects/snake",
+		"summary" : "This is a Snake browser game made with javascript. Your highscores are automatically stored in the browser, so no need to worry about loosing your best scores. Enjoy!",
+		"featured" : true,
+		"image" : "/images/snake.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Games"
+	},
+	{
+		"title": "Map Generation",
+		"number" : 8,
+		"page_link" : "https://gcox.dev/projects/map-generation",
+		"summary" : "With this tool you can procedurally generate cool maps. Using different noise algorithms allows you to generate random and unique maps every time. With two different noise algorithms you can explore their different benefits and drawbacks, and learn how you can implement these concepts into your own projects.",
+		"featured" : true,
+		"image" : "/images/map-generation/map.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Other"
+	}
+]
