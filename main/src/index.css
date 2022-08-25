@@ -147,7 +147,7 @@ body {
     display: flex;
     width: 100%;
     display: none;
-    margin-top: 8vh;
+    margin-top: 5vh;
     flex-direction: column;
     background-color: #000;
 }
@@ -333,6 +333,7 @@ header {
     font-family: 'Source Code', monospace;
     text-align: center;
     margin: 20px;
+    margin-top: 10vh;
     font-size: 2rem;
 }
 
