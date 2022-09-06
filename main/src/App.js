@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Routes, Route, Outlet} from 'react-router-dom';
 import NavBar from './components/NavBar'
 import Footer from './components/Footer';
@@ -12,6 +12,7 @@ import NoResult from './pages/NoResult';
 import NBody from './projects/n-body/NBody';
 import SnakeGame from './projects/snake/Snake';
 import MapGeneration from './projects/map-generation/MapGeneration';
+import Particles from './projects/particles/Particles';
 
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
       <Route path="/projects/n-body/demo" element={<NBody />}/>
       <Route path="/projects/map-generation/demo" element={<MapGeneration />}/>
       <Route path="/projects/snake" element={<SnakeGame />}/>
+      <Route path="/projects/particles/" element={<Particles />}/>
       <Route path="*" element={<NoResult/>}/>
     </Routes>
   );

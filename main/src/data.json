@@ -97,5 +97,17 @@
 			"JS"
 		],
 		"category" : "Other"
+	},
+	{
+		"title": "Particles",
+		"number" : 9,
+		"page_link" : "https://gcox.dev/projects/particles",
+		"summary" : "Due to popular requests, I have recreated the particles found on the landing page of the website for users to create their own. You can change the qualities of the particles, change their colors, change the number of particles, and even change how the mouse affects the particles.",
+		"featured" : true,
+		"image" : "/images/particles.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Other"
 	}
 ]

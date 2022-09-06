@@ -34,7 +34,7 @@ export default function Header(props) {
     let mouse = {
         x: null,
         y: null,
-        radius: 100
+        radius: 75
     }
 
     let density = 7000;
@@ -84,16 +84,16 @@ export default function Header(props) {
             let distance = Math.sqrt(dx*dx + dy*dy);
             if (distance < mouse.radius) {
                 if (mouse.x < this.x && this.x < window.innerWidth - this.size * 10) {
-                    this.x += 5;
+                    this.x += mouse.radius - distance;
                 }
                 if (mouse.x > this.x && this.x > this.size * 10) {
-                    this.x -= 5;
+                    this.x -= mouse.radius - distance;
                 }
                 if (mouse.y < this.y && this.y < window.innerHeight - this.size * 10) {
-                    this.y += 5;
+                    this.y += mouse.radius - distance;
                 }
                 if (mouse.y > this.y && this.y > this.size * 10) {
-                    this.y -= 5;
+                    this.y -= mouse.radius - distance;
                 }
             }
 
