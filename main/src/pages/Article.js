@@ -141,7 +141,7 @@ export function ToDoList() {
 export function Portfolio() {
     return (
         <Article cur={data[4]}>
-            <p>This website is a showcase of my computer science projects.. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to the world.</p>
+            <p>This website is a showcase of my computer science projects. These range from websites and app development, to arduino robots, and even javascript games. I love to code, and I love to share my work. So by creating this website I have done both, it allows me to share everything I do to the world.</p>
             <Subtitle>Design Process</Subtitle>
             <p>This is the fifth version of this site. I have been building some sort of my own personal website for about six years, however I only took it seriously when I started on the third version. This had some of the features that exist today however I did not use git at the time and it was ultimately lost when the laptop went out.</p>
             <Tp>The fourth version was created with HTML/CSS and vanilla JavaScript. This was the version initially released. It had most of the features of the current site, however it was missing sorting and a site wide search bar.</Tp>
@@ -156,7 +156,7 @@ export function Portfolio() {
 export function NBodyArticle() {
     return (
         <Article cur={data[5]}>
-            <p>A <a href="./demo">N-Body Simulation</a> calculates the gravity for a system of a n amount of bodies. This serves to explore planetary orbits and how planets affect each other. You can click to add a body to the simulation. By clicking and dragging you can give the body an initial velocity. In addition you can alter parameters like initial mass and the gravitational constant.</p>
+            <p>A <a href="https://gcox.dev/projects/n-body/demo">N-Body Simulation</a> calculates the gravity for a system of a n amount of bodies. This serves to explore planetary orbits and how planets affect each other. You can click to add a body to the simulation. By clicking and dragging you can give the body an initial velocity. In addition you can alter parameters like initial mass and the gravitational constant.</p>
             <Subtitle>Explanation</Subtitle>
             <p>The force of gravity on one body in a system equals the sumation of forces equal to the gravitational constant times the product of the two masses over the distance between the two bodies squared. Or ΣF = G * ((m₁ * m₂) / r²). This equation can be calculated by looping over every body in the system: </p>
             <Code lang="javascript">
@@ -210,7 +210,7 @@ b1.acc.y += G * b2.mass * dy / Math.pow(dist, 2);`}
 export function MapGenerationArticle() {
     return (
         <Article cur={data[7]}>
-            <p>With this <a href="./map-generation/demo">tool</a> you can procedurally generate cool maps. Using different noise algorithms allows you to generate random and unique maps every time. With two different noise algorithms you can explore their different benefits and drawbacks, and learn how you can implement these concepts into your own projects.</p>
+            <p>With this <a href="https://gcox.dev/projects/map-generation/demo">tool</a> you can procedurally generate cool maps. Using different noise algorithms allows you to generate random and unique maps every time. With two different noise algorithms you can explore their different benefits and drawbacks, and learn how you can implement these concepts into your own projects.</p>
             <Subtitle>Random Noise</Subtitle>
             <p>Noise has many applications within computer science. In this case we are using noise to procedurally generate maps. By generating random values within an array we can make a height map. From there we can assign different colors according to the height of that point. However as you can see in the picture below there is a problem with randomly generated noise. There are no smooth transitions between points, which results in unnatural height maps. This is where other types of noise come in.</p>
             <Image src={"/images/map-generation/noise1.png"} />
@@ -225,6 +225,31 @@ export function MapGenerationArticle() {
             <p>Another way we can apply the perlin noise algorithm is by layering the noise. This helps with creating a rougher and more natural look. This is achieved by looping over each point in an array multiple times, each time applying the perlin noise algorithm, but with increasing frequency and decreasing amplitude every time the point is looped over. See the example below.</p>
             <Image src={"/images/map-generation/noise4.png"} />
             <Sources srcs={[{link : "https://github.com/grantcox22/MapGeneration.git", txt : "Github"}, {link : "https://gcox.dev/projects/map-generation/demo", txt : "Demo"}]} />
+        </Article>
+    );
+}
+
+export function GameOfLifeArticle() {
+    return (
+        <Article cur={data[9]}>
+            <p>The <a href="./game-of-life/demo">Game of Life</a> is a cellular automaton devised by British mathematician John Conway in the 1970s. Despite its simplicity, it is possible to create advanced machines using the life-like behaviors of the structures that form.</p>
+            <Subtitle>Images</Subtitle>
+            <Carousel slides={[<ImageSlide src="/images/game-of-life/img1.svg"/>,<ImageSlide src="/images/game-of-life/img2.svg"/>,<ImageSlide src="/images/game-of-life/img3.svg"/>]}/>
+            <Subtitle>How it Works</Subtitle>
+            <p>
+                The simulation runs off of a simple set of rules. These rules decide if a cell lives or dies based on its neighbor's state.
+                <ul>
+                    <li>If a cell has less than two neighbors it dies due to underpopulation</li>
+                    <li>If a cell has two neighbors it stays the same</li>
+                    <li>If a cell has three neighbors it becomes alive</li>
+                    <li>If a cell has more than three neighbors it dies due to overpopulation</li> 
+                </ul>
+                This creates the illusion of life as cells reproduce, live, and die. 
+            </p>
+            <Tp>During each cycle of the simulation, each cell checks each of its neighbor's states at that moment in time. Depending on how many neighbors are alive or dead at the given moment decides whether or not that cell survives or dies. Most formations are unstable however there are some formations that will survive given there are no interruptions. There are three types of these: still lifes, oscillators, and spaceships.</Tp>
+            <Subtitle>Simulation in Motion</Subtitle>
+            <Video src={"https://www.youtube.com/embed/4rzF-hFc1gw?playlist=4rzF-hFc1gw"} />
+            <Sources srcs={[{link : "https://gcox.dev/projects/game-of-life/demo", txt : "Demo"}]}/>
         </Article>
     );
 }

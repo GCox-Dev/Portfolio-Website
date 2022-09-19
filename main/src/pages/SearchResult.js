@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
-import Header from '../components/Header';
 import data from '../data.json';
 
 

@@ -79,7 +79,7 @@
 		"number" : 7,
 		"page_link" : "https://gcox.dev/projects/snake",
 		"summary" : "This is a Snake browser game made with javascript. Your highscores are automatically stored in the browser, so no need to worry about loosing your best scores. Enjoy!",
-		"featured" : true,
+		"featured" : false,
 		"image" : "/images/snake.svg",
 		"lang" : [
 			"JS"
@@ -102,12 +102,24 @@
 		"title": "Particles",
 		"number" : 9,
 		"page_link" : "https://gcox.dev/projects/particles",
-		"summary" : "Due to popular requests, I have recreated the particles found on the landing page of the website for users to create their own. You can change the qualities of the particles, change their colors, change the number of particles, and even change how the mouse affects the particles.",
+		"summary" : "Due to popular requests, I have recreated the particles found on the landing page of the website for users to create their own. You can change the parameters to make the particles faster, change their size, change their colors, change the number of particles, and even change how the mouse affects the particles.",
 		"featured" : true,
 		"image" : "/images/particles.svg",
 		"lang" : [
 			"JS"
 		],
 		"category" : "Other"
-	}
+	},
+	{
+		"title" : "Game Of Life",
+		"number" : 10,
+		"page_link" : "https://gcox.dev/projects/game-of-life/",
+		"summary" : "The game of life is a cellular automaton devised by British mathematician John Conway in the 1970s. Despite its simplicity, it is possible to create advanced machines using the life-like behaviors of the structures that form.",
+ 		"featured" : true,
+		"image" : "/images/game-of-life/gameoflife.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Other"
+ 	}
 ]

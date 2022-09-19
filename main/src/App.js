@@ -7,12 +7,13 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import SearchResult from './pages/SearchResult';
-import { Cyclone, FinalsWeek, MapGenerationArticle, NBodyArticle, Portfolio, ToDoList } from './pages/Article';
+import { Cyclone, FinalsWeek, MapGenerationArticle, NBodyArticle, Portfolio, ToDoList, GameOfLifeArticle } from './pages/Article';
 import NoResult from './pages/NoResult';
 import NBody from './projects/n-body/NBody';
 import SnakeGame from './projects/snake/Snake';
 import MapGeneration from './projects/map-generation/MapGeneration';
 import Particles from './projects/particles/Particles';
+import GameOfLife from './projects/game-of-life/GameOfLife';
 
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/projects/portfolio" element={<Portfolio />}/>
           <Route path="/projects/n-body" element={<NBodyArticle />}/>
           <Route path="/projects/map-generation" element={<MapGenerationArticle/>}/>
+          <Route path="/projects/game-of-life" element={<GameOfLifeArticle/>}/>
         </Route>
         <Route path="/about" element={<About />}/>
         <Route path="/results/:term" element={<SearchResult />}/>
@@ -37,6 +39,7 @@ export default function App() {
       <Route path="/projects/map-generation/demo" element={<MapGeneration />}/>
       <Route path="/projects/snake" element={<SnakeGame />}/>
       <Route path="/projects/particles/" element={<Particles />}/>
+      <Route path="/projects/game-of-life/demo" element={<GameOfLife />}/>
       <Route path="*" element={<NoResult/>}/>
     </Routes>
   );

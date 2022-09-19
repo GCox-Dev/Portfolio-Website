@@ -1,6 +1,4 @@
 
-import React from 'react';
-
 export function typeWriter(text, target, speed) {
     function animation(src, i, fnCallback) {
         if (i < src.length) {
