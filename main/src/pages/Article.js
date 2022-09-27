@@ -232,7 +232,7 @@ export function MapGenerationArticle() {
 export function GameOfLifeArticle() {
     return (
         <Article cur={data[9]}>
-            <p>The <a href="./game-of-life/demo">Game of Life</a> is a cellular automaton devised by British mathematician John Conway in the 1970s. Despite its simplicity, it is possible to create advanced machines using the life-like behaviors of the structures that form.</p>
+            <p>The <a href="https://gcox.dev/projects/game-of-life/demo">Game of Life</a> is a cellular automaton devised by British mathematician John Conway in the 1970s. Despite its simplicity, it is possible to create advanced machines using the life-like behaviors of the structures that form.</p>
             <Subtitle>Images</Subtitle>
             <Carousel slides={[<ImageSlide src="/images/game-of-life/img1.svg"/>,<ImageSlide src="/images/game-of-life/img2.svg"/>,<ImageSlide src="/images/game-of-life/img3.svg"/>]}/>
             <Subtitle>How it Works</Subtitle>
@@ -249,7 +249,7 @@ export function GameOfLifeArticle() {
             <Tp>During each cycle of the simulation, each cell checks each of its neighbor's states at that moment in time. Depending on how many neighbors are alive or dead at the given moment decides whether or not that cell survives or dies. Most formations are unstable however there are some formations that will survive given there are no interruptions. There are three types of these: still lifes, oscillators, and spaceships.</Tp>
             <Subtitle>Simulation in Motion</Subtitle>
             <Video src={"https://www.youtube.com/embed/4rzF-hFc1gw?playlist=4rzF-hFc1gw"} />
-            <Sources srcs={[{link : "https://gcox.dev/projects/game-of-life/demo", txt : "Demo"}]}/>
+            <Sources srcs={[{link : "https://github.com/grantcox22/GameOfLife", txt : "Github"}, {link : "https://gcox.dev/projects/game-of-life/demo", txt : "Demo"}]}/>
         </Article>
     );
 }

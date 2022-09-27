@@ -121,5 +121,17 @@
 			"JS"
 		],
 		"category" : "Other"
+ 	},
+	{
+		"title" : "Pong",
+		"number" : 11,
+		"page_link" : "https://gcox.dev/projects/pong/",
+		"summary" : "Play my take on the classic arcade game Pong. Featuring two players battling it out to 11 points.",
+		"featured" : false,
+		"image" : "/images/pong.svg",
+		"lang" : [
+			"JS"
+		],
+		"category" : "Games"
  	}
 ]

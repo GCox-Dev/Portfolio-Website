@@ -9,9 +9,11 @@ export default function ProjectCard(data) {
         let result = "";
         let intro = project.summary.split("");
         for (let i = 0; i < intro.length && i < 99; i++) {
-            result += intro[i];
+            if (intro[i] != undefined) result += intro[i];
+            else break;
         }
-        result += intro[99] == " " ? intro[99] : intro[99] + " ";
+        if (intro[99] != undefined) result += intro[99] == " " ? intro[99] : intro[99] + " ";
+        else result += " ";
         return (<p>{result}<a href={project.page_link} target="_blank">[...]</a></p>);
     } 
     return (

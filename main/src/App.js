@@ -14,6 +14,7 @@ import SnakeGame from './projects/snake/Snake';
 import MapGeneration from './projects/map-generation/MapGeneration';
 import Particles from './projects/particles/Particles';
 import GameOfLife from './projects/game-of-life/GameOfLife';
+import Pong from './projects/pong/Pong';
 
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
       <Route path="/projects/snake" element={<SnakeGame />}/>
       <Route path="/projects/particles/" element={<Particles />}/>
       <Route path="/projects/game-of-life/demo" element={<GameOfLife />}/>
+      <Route path="/projects/pong" element={<Pong/>}/>
       <Route path="*" element={<NoResult/>}/>
     </Routes>
   );
