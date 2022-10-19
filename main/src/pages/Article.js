@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Carousel, { ImageSlide} from '../components/Carousel';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Carousel, { ImageSlide } from '../components/Carousel';
 import Header from '../components/Header';
 import data from '../data.json';
 
