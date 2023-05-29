@@ -10,8 +10,8 @@ export default function About() {
 			<div className="page">
 				<PageSection title={'about'}>
 					<p>
-						Hi, my name is Grant Cox. I am a solo web developer with over two
-						years of experience. I am currently a freshman in college studying
+						Hi, my name is Grant Cox. I am a solo web developer with over three
+						years of experience. I am currently a sophomore in college studying
 						electrical and computer engineering, with a minor in computer
 						science.
 					</p>
@@ -21,7 +21,9 @@ export default function About() {
 						computer class where we learned to create websites with basic HTML
 						and CSS. I then got a Raspberry Pi where I would learn my first
 						programming language, Python. Once I got the basics down I learned
-						Java, C++, C#, JavaScript, and Dart.
+						Java, C++, C#, JavaScript, and Dart. I now have formal education
+						through my degree program which taught me algoritm design and
+						optimization in C.
 					</p>
 					<div className="sub-section">
 						<ul>
@@ -29,6 +31,7 @@ export default function About() {
 							<li>CSS</li>
 							<li>Python</li>
 							<li>Java</li>
+							<li>C</li>
 							<li>C++</li>
 							<li>C#</li>
 							<li>WordPress</li>

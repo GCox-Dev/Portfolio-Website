@@ -35,8 +35,8 @@ export default function Home() {
 				</PageSection>
 				<PageSection title={'about'}>
 					<p>
-						Hi, my name is Grant Cox. I am a solo web developer with over two
-						years of experience. I am currently a freshman in college studying
+						Hi, my name is Grant Cox. I am a solo web developer with over three
+						years of experience. I am currently a sophomore in college studying
 						electrical and computer engineering, with a minor in computer
 						science.
 					</p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
+	const date = new Date();
 	return (
 		<footer>
 			<div className="footer-section">
@@ -20,7 +21,7 @@ export default function Footer() {
 						<FaGithub />
 					</a>
 				</div>
-				<h5>Copyright © 2022 GCox Dev</h5>
+				<h5>Copyright © {date.getFullYear()} GCox Dev | v4.2</h5>
 			</div>
 		</footer>
 	);

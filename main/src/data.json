@@ -7,7 +7,8 @@
 		"featured": false,
 		"image": "/images/cyclone/cyclone.svg",
 		"lang": ["C++"],
-		"category": "Arduino"
+		"category": "Arduino",
+		"has_article": true
 	},
 	{
 		"title": "Finals Week",
@@ -17,7 +18,8 @@
 		"featured": false,
 		"image": "/images/finals-week/finalsweek.svg",
 		"lang": ["Dart", "Flutter"],
-		"category": "Mobile App"
+		"category": "Mobile App",
+		"has_article": true
 	},
 	{
 		"title": "To Do List",
@@ -27,7 +29,8 @@
 		"featured": false,
 		"image": "/images/to-do-list/todo.svg",
 		"lang": ["Dart", "Flutter"],
-		"category": "Mobile App"
+		"category": "Mobile App",
+		"has_article": true
 	},
 	{
 		"title": "Ultrasound First",
@@ -37,7 +40,8 @@
 		"featured": false,
 		"image": "/images/ultrasoundfirst.svg",
 		"lang": ["WordPress", "CSS"],
-		"category": "Website"
+		"category": "Website",
+		"has_article": false
 	},
 	{
 		"title": "Portfolio",
@@ -47,7 +51,8 @@
 		"featured": false,
 		"image": "/images/portfolio.svg",
 		"lang": ["JS", "React", "CSS"],
-		"category": "Website"
+		"category": "Website",
+		"has_article": false
 	},
 	{
 		"title": "N-Body Simulation",
@@ -57,7 +62,8 @@
 		"featured": true,
 		"image": "/images/n-body/n-body.svg",
 		"lang": ["JS"],
-		"category": "Other"
+		"category": "Algorithm Exploration",
+		"has_article": true
 	},
 	{
 		"title": "Snake",
@@ -67,7 +73,8 @@
 		"featured": false,
 		"image": "/images/snake.svg",
 		"lang": ["JS"],
-		"category": "Games"
+		"category": "Games",
+		"has_article": false
 	},
 	{
 		"title": "Map Generation",
@@ -77,7 +84,8 @@
 		"featured": true,
 		"image": "/images/map-generation/map.svg",
 		"lang": ["JS"],
-		"category": "Other"
+		"category": "Algorithm Exploration",
+		"has_article": true
 	},
 	{
 		"title": "Particles",
@@ -87,7 +95,8 @@
 		"featured": true,
 		"image": "/images/particles.svg",
 		"lang": ["JS"],
-		"category": "Other"
+		"category": "Other",
+		"has_article": false
 	},
 	{
 		"title": "Game Of Life",
@@ -97,7 +106,8 @@
 		"featured": true,
 		"image": "/images/game-of-life/gameoflife.svg",
 		"lang": ["JS"],
-		"category": "Other"
+		"category": "Algorithm Exploration",
+		"has_article": true
 	},
 	{
 		"title": "Pong",
@@ -107,6 +117,7 @@
 		"featured": false,
 		"image": "/images/pong.svg",
 		"lang": ["JS"],
-		"category": "Games"
+		"category": "Games",
+		"has_article": false
 	}
 ]

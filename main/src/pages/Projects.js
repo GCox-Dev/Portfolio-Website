@@ -15,7 +15,7 @@ export default function Projects() {
 	function filterData(filter) {
 		setCurrentFilter(filter);
 		let result = filteredData;
-		if (filter == 'oldest') {
+		if (filter === 'oldest') {
 			for (let i = 0; i < result.length; i++) {
 				for (let j = i + 1; j < result.length; j++) {
 					if (result[i].number > result[j].number) {
@@ -25,7 +25,7 @@ export default function Projects() {
 					}
 				}
 			}
-		} else if (filter == 'newest') {
+		} else if (filter === 'newest') {
 			for (let i = 0; i < result.length; i++) {
 				for (let j = i + 1; j < result.length; j++) {
 					if (result[i].number < result[j].number) {
@@ -35,12 +35,38 @@ export default function Projects() {
 					}
 				}
 			}
-		} else if (filter == 'a-z') {
+		} else if (filter === 'a-z') {
 			for (let i = 0; i < result.length; i++) {
 				for (let j = i + 1; j < result.length; j++) {
 					if (
 						result[i].title.localeCompare(result[j].title) >
 						result[j].title.localeCompare(result[i].title)
+					) {
+						let buffer = filteredData[j];
+						result[j] = result[i];
+						result[i] = buffer;
+					}
+				}
+			}
+		} else if (filter === 'category') {
+			for (let i = 0; i < result.length; i++) {
+				for (let j = i + 1; j < result.length; j++) {
+					if (
+						result[i].title.localeCompare(result[j].category) >
+						result[j].title.localeCompare(result[i].category)
+					) {
+						let buffer = filteredData[j];
+						result[j] = result[i];
+						result[i] = buffer;
+					}
+				}
+			}
+		} else if (filter === 'lang') {
+			for (let i = 0; i < result.length; i++) {
+				for (let j = i + 1; j < result.length; j++) {
+					if (
+						result[i].title.localeCompare(result[j].lang[0]) >
+						result[j].title.localeCompare(result[i].lang[0])
 					) {
 						let buffer = filteredData[j];
 						result[j] = result[i];
@@ -117,6 +143,26 @@ export default function Projects() {
 								}}
 							>
 								A-Z
+							</div>
+							<div
+								className={
+									currentFilter == 'category' ? 'option-selected' : 'option'
+								}
+								onClick={() => {
+									filterData('category');
+								}}
+							>
+								Category
+							</div>
+							<div
+								className={
+									currentFilter == 'lang' ? 'option-selected' : 'option'
+								}
+								onClick={() => {
+									filterData('lang');
+								}}
+							>
+								Lang
 							</div>
 						</div>
 					</div>

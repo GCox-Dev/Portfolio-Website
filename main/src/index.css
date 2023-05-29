@@ -408,6 +408,10 @@ article a:hover {
 	flex-direction: column;
 }
 
+.table-of-contents {
+	align-self: flex-start;
+}
+
 /***********
  * Contact *
  ***********/
@@ -473,14 +477,24 @@ article a:hover {
 	width: 1.5em;
 	height: 1.5em;
 	position: absolute;
+	opacity: 0;
+	transition: transform 0.5s, opacity 0.2s ease-in;
 }
 
 .arrow.left {
 	left: 10px;
+	transform: translateX(15px);
 }
 
 .arrow.right {
 	right: 10px;
+	transform: translateX(-15px);
+}
+
+.carousel:hover .arrow,
+.carousel:hover .dots {
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 .arrow:hover {
@@ -496,6 +510,9 @@ article a:hover {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-items: center;
+	opacity: 0;
+	transform: translateY(5px);
+	transition: transform 0.5s, opacity 0.2s ease-in;
 }
 
 .dots div {
@@ -749,7 +766,7 @@ article a:hover {
 
 .dropdown {
 	margin-top: 3px;
-	width: 70px;
+	width: 85px;
 	z-index: 200;
 	display: none;
 }
