@@ -621,7 +621,7 @@ export function GameOfLifeArticle() {
 	return (
 		<Article
 			cur={data[9]}
-			contents={['Images', 'How ot Works', 'Simulation in Motion']}
+			contents={['Images', 'How it Works', 'Simulation in Motion']}
 		>
 			<p>
 				The{' '}

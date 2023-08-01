@@ -275,12 +275,12 @@ header {
 	padding: 20px;
 }
 
-.page section:nth-child(odd) {
-	transform: translateX(25%);
+.page .page-section:nth-child(odd) {
+	transform: translateX(80%);
 }
 
-.page section:nth-child(even) {
-	transform: translateX(-25%);
+.page .page-section:nth-child(even) {
+	transform: translateX(-80%);
 }
 
 .page section {
@@ -293,33 +293,40 @@ header {
 	padding: 25vh 25px;
 	max-width: 950px;
 	opacity: 0;
-	transition: opacity 0.8s ease, transform 0.8s ease-out;
+	filter: blur(5px);
+	transition: all 1.2s;
 }
 
-.page section .sub-section {
+.page .show {
+	transform: translateX(0) !important;
+	filter: blur(0px);
+	opacity: 1;
+}
+
+.page .page-section .sub-section {
 	padding-left: 25px;
 }
 
-.page section h4 {
+.page .page-section h4 {
 	color: #fff;
 	font-size: 1.3rem;
 	margin: 10px 0;
 }
 
-.page section p {
+.page .page-section p {
 	padding-left: 25px;
 	margin: 0px auto;
 	color: #fff;
 }
 
-.page section ul {
+.page .page-section ul {
 	display: flex;
 	margin: 5px 0;
 	list-style-type: none;
 	flex-wrap: wrap;
 }
 
-.page section li {
+.page .page-section li {
 	color: #ccc;
 	font-size: 1rem;
 	margin: 0 5px;

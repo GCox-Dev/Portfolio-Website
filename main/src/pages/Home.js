@@ -10,7 +10,6 @@ export default function Home() {
 	for (let i = data.length - 1; i >= 0; i--) {
 		if (data[i].featured) {
 			featured.push(data[i]);
-			console.log(data[i]);
 		}
 	}
 

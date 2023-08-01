@@ -17,6 +17,7 @@ import Home from './pages/Home';
 import NoResult from './pages/NoResult';
 import Projects from './pages/Projects';
 import SearchResult from './pages/SearchResult';
+import FluidSimulation from './projects/fluid-simulation/FluidSimulation';
 import GameOfLife from './projects/game-of-life/GameOfLife';
 import MapGeneration from './projects/map-generation/MapGeneration';
 import NBody from './projects/n-body/NBody';
@@ -54,6 +55,10 @@ export default function App() {
 			<Route path="/projects/particles/" element={<Particles />} />
 			<Route path="/projects/game-of-life/demo" element={<GameOfLife />} />
 			<Route path="/projects/pong" element={<Pong />} />
+			{/* <Route
+				path="/projects/fluid-simulation/demo"
+				element={<FluidSimulation />}
+			/> */}
 			<Route path="*" element={<NoResult />} />
 		</Routes>
 	);

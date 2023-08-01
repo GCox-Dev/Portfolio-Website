@@ -21,7 +21,7 @@ export default function Footer() {
 						<FaGithub />
 					</a>
 				</div>
-				<h5>Copyright © {date.getFullYear()} GCox Dev | v4.2</h5>
+				<h5>Copyright © {date.getFullYear()} GCox Dev | v4.2.1</h5>
 			</div>
 		</footer>
 	);

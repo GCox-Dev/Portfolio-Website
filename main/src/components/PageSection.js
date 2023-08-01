@@ -4,28 +4,23 @@ export default function PageSection(props) {
 	const { title } = props;
 	const sectionRef = useRef(null);
 
-	window.addEventListener('load', () => {
-		if (
-			window.scrollY >
-			sectionRef.current.offsetTop + window.innerHeight * 0.5
-		) {
-			sectionRef.current.style.opacity = 1;
-			sectionRef.current.style.transform = 'translateX(0)';
-		}
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('show');
+			} else {
+				entry.target.classList.remove('show');
+			}
+		});
 	});
 
-	window.addEventListener('scroll', () => {
-		if (
-			window.scrollY >
-			sectionRef.current.offsetTop + window.innerHeight * 0.5
-		) {
-			sectionRef.current.style.opacity = 1;
-			sectionRef.current.style.transform = 'translateX(0)';
-		}
+	window.addEventListener('load', () => {
+		let sections = document.querySelectorAll('.page-section');
+		sections.forEach((el) => observer.observe(el));
 	});
 
 	return (
-		<section ref={sectionRef}>
+		<section className="page-section" ref={sectionRef}>
 			<h4>{`<${title}>`}</h4>
 			{props.children}
 			<h4>{`</${title}>`}</h4>
