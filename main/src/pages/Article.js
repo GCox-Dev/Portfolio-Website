@@ -29,6 +29,7 @@ export default function Article(props) {
 				<h2>{`<${cur.title}>`}</h2>
 				{props.children}
 				<NextArticle cur={cur} />
+				<PrevArticle cur={cur} />
 			</article>
 		</div>
 	);
@@ -48,6 +49,26 @@ function NextArticle(props) {
 			if (data[num].has_article) {
 				return <a href={`${data[num].page_link}`}>Next Article</a>;
 			} else num++;
+		}
+		return <></>;
+	}
+}
+
+function PrevArticle(props) {
+	let { cur } = props;
+	if (cur.number <= 1) return <></>;
+	if (data[cur.number - 1].has_article) {
+		return cur.number < data.length ? (
+			<a href={`${data[cur.number - 2].page_link}`}>Previous Article</a>
+		) : (
+			<></>
+		);
+	} else {
+		let num = cur.number - 1;
+		while (num > 0) {
+			if (data[num].has_article) {
+				return <a href={`${data[num].page_link}`}>Previous Article</a>;
+			} else num--;
 		}
 		return <></>;
 	}
